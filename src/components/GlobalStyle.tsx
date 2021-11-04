@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background: ${colors.primary};
+    background: linear-gradient(#090909 58%, #193c36 100%);
     font-family: 'iA Writer Mono', 'Courier New', Courier, monospace;
     font-weight: normal;
     word-wrap: break-word;

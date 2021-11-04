@@ -13,50 +13,43 @@ interface Props {
 }
 
 const Root = styled.div`
-  min-height: 100vh;
+  min-height: calc(100vh - 56px);
 `;
 
 const Container = styled.div`
-  padding-left: 80px;
-  min-height: 100vh;
-  background: ${colors.primary};
+  margin: 56px 0 0 56px;
+  padding-top: 75px;
+  padding-right: 56px;
+  max-height: calc(100vh - 56px);
+  border: 1px solid #17ffe3;
+  border-top-left-radius: 100px;
+  border-right: 0;
   color: ${lighten(0.83, colors.primary)};
-
-  @media (max-width: 768px) {
-    padding-left: 20px;
-  }
+  overflow: hidden;
 `;
 
-const Content = styled.div<Pick<Props, 'width'>>`
+const Content = styled.div`
   position: relative;
-  top: -20px;
   margin: 0 auto;
-  padding: 0 20px 60px;
-  max-width: ${({ width }) => width}px;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const Footer = styled.footer`
   margin-top: 20px;
 `;
 
-export const Layout = ({ children, width = 960 }: Props) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
-
+export const Layout = ({ children }: Props) => {
   return (
     <Root>
       <GlobalStyle />
       <Container>
-        <Header siteTitle={data.site.siteMetadata?.title} />
-        <Content width={width}>
-          <main>{children}</main>
+        <Header />
+        <Content>
+          {children}
           <Footer />
         </Content>
       </Container>
