@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -37,7 +36,7 @@ export const SEO = ({
         lang,
       }}
       title={title}
-      titleTemplate={`%s / ${defaultTitle}`}
+      titleTemplate={defaultTitle}
       meta={[
         {
           name: `description`,
@@ -45,7 +44,7 @@ export const SEO = ({
         },
         {
           property: `og:title`,
-          content: `${title} / ${defaultTitle}`,
+          content: defaultTitle,
         },
         {
           property: `og:description`,
@@ -65,7 +64,7 @@ export const SEO = ({
         },
         {
           name: `twitter:title`,
-          content: `${title} // ${defaultTitle}`,
+          content: defaultTitle,
         },
         {
           name: `twitter:description`,
