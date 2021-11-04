@@ -5,13 +5,13 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    //{
-    //resolve: `gatsby-source-filesystem`,
-    //options: {
-    //name: `images`,
-    //path: `${__dirname}/src/images`,
-    //},
-    //},
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `animations`,
+        path: `${__dirname}/src/animations`,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -19,6 +19,13 @@ module.exports = {
       options: {
         name: 'fonts',
         path: `${__dirname}/src/fonts/`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'lib',
+        path: `${__dirname}/src/lib/`,
       },
     },
     {
