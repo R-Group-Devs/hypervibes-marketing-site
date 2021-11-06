@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 import { colors } from '../constants/colors';
 
 export const GlobalStyle = createGlobalStyle`
+  * {
+    border-sizing: border-box;
+  }
+
   html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -13,7 +17,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background: linear-gradient(#090909 58%, #193c36 100%);
+    background: linear-gradient(#090909 30%, #193c36 100%);
+    background-attachment: fixed;
     font-family: 'iA Writer Mono', 'Courier New', Courier, monospace;
     font-weight: normal;
     word-wrap: break-word;

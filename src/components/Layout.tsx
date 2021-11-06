@@ -13,19 +13,13 @@ interface Props {
 }
 
 const Root = styled.div`
-  min-height: calc(100vh - 56px);
+  min-height: 100vh;
+  padding-left: 145px;
 `;
 
 const Container = styled.div`
-  margin: 56px 0 0 56px;
-  padding-top: 75px;
-  padding-right: 56px;
-  max-height: calc(100vh - 56px);
-  border: 1px solid #17ffe3;
-  border-top-left-radius: 100px;
-  border-right: 0;
+  max-height: 100vh;
   color: ${lighten(0.83, colors.primary)};
-  overflow: hidden;
 `;
 
 const Content = styled.div`
