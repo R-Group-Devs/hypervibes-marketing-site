@@ -7,11 +7,19 @@ import speRuntime from '../lib/runtime';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 
+const CanvasContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 200px;
+  width: 100%;
+  background: linear-gradient(#090909 80%, transparent 100%);
+`;
+
 const Canvas = styled.canvas`
+  margin-left: -90px;
   width: auto !important;
-  max-width: 72% !important;
-  height: 43.929% !important;
-  display: none;
+  height: 80vh !important;
 `;
 
 const SpeRuntime = speRuntime();
@@ -21,18 +29,21 @@ const app = new SpeRuntime.Application();
 const IndexPage = () => {
   useLayoutEffect(() => {
     // @ts-ignore
-    //app.start('./scene.json');
+    app.start('./scene.json');
   }, []);
 
   return (
-    <Layout>
+    <>
       <SEO title="Home" />
+      <CanvasContainer>
+        <Canvas id="canvas3d"></Canvas>
+      </CanvasContainer>
 
-      <Canvas id="canvas3d"></Canvas>
-
-      <WhatIsHyperVibes />
-      <HowToSpreadGoodHyperVibes />
-    </Layout>
+      <Layout>
+        <WhatIsHyperVibes />
+        <HowToSpreadGoodHyperVibes />
+      </Layout>
+    </>
   );
 };
 

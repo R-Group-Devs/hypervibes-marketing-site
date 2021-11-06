@@ -17,6 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+    padding-top: 100px;
     background: linear-gradient(#090909 30%, #193c36 100%);
     background-attachment: fixed;
     font-family: 'Decima Mono', 'Courier New', Courier, monospace;

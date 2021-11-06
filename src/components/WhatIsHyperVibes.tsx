@@ -12,6 +12,8 @@ import starsBg from '../assets/images/stars-bg.png';
 import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`
+  position: relative;
+  top: -100px;
   padding-top: 60px;
   width: 100%;
   height: 100vh;

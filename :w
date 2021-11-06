@@ -12,9 +12,7 @@ interface Props {
   width?: number;
 }
 
-const Root = styled.div`
-  padding-left: 145px;
-`;
+const Root = styled.div``;
 
 const Container = styled.div`
   max-height: 100vh;
