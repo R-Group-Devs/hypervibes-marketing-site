@@ -5,6 +5,7 @@ import { SEO } from '../components/SEO';
 // @ts-ignore
 import speRuntime from '../lib/runtime';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
+import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 
 const Canvas = styled.canvas`
   width: auto !important;
@@ -30,6 +31,7 @@ const IndexPage = () => {
       <Canvas id="canvas3d"></Canvas>
 
       <WhatIsHyperVibes />
+      <HowToSpreadGoodHyperVibes />
     </Layout>
   );
 };
