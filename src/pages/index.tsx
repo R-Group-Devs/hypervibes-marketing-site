@@ -13,7 +13,7 @@ const CanvasContainer = styled.div`
   justify-content: center;
   padding-bottom: 200px;
   width: 100%;
-  background: linear-gradient(#090909 80%, transparent 100%);
+  background: #090909;
 `;
 
 const Canvas = styled.canvas`
