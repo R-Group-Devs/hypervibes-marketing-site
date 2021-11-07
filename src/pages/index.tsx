@@ -17,6 +17,7 @@ const OuterVideoContainer = styled.div`
 const VideoContainer = styled.div`
   position: absolute;
   padding-top: 45px;
+  min-width: 100%;
   height: 160vh;
   min-height: 1200px;
   background: linear-gradient(#090909 70%, transparent 100%);
@@ -112,9 +113,9 @@ const IndexPage = () => {
               Scroll
             </Scroll>
           </Overlays>
+          <Nav />
         </VideoContainer>
       </OuterVideoContainer>
-      <Nav />
 
       <Layout>
         <WhatIsHyperVibes />

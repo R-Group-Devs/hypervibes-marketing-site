@@ -33,11 +33,14 @@ const RaribleDaoLogo = styled.img`
 `;
 
 export const Footer = () => (
-  <Container id="contact-us">
+  <Container id="contribute">
     <Nav position="bottom" />
     <BuiltAt>
       <BuiltAtDescription>Dreamt up & built at</BuiltAtDescription>
-      <RaribleDaoLogo src={raribleDaoLogo} alt="Rarible DAO" />
+
+      <a href="https://discord.gg/E9hsASB8Hk" target="_blank" rel="noreferrer">
+        <RaribleDaoLogo src={raribleDaoLogo} alt="Rarible DAO" />
+      </a>
     </BuiltAt>
   </Container>
 );

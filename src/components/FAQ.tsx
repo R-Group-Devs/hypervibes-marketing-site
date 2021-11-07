@@ -46,6 +46,7 @@ const Container = styled.div`
   padding-left: 145px;
   width: 100%;
   background: #090909;
+  background: linear-gradient(transparent 0%, #090909 40%);
 `;
 
 const HeadingContainer = styled.div`

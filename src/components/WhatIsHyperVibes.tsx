@@ -12,6 +12,7 @@ import starsBg from '../assets/images/stars-bg.png';
 import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`
+  margin-top: 80px;
   padding-top: 90px;
   padding-left: 145px;
   width: 100%;
@@ -64,6 +65,7 @@ const BulletTwo = styled.div`
 const BulletThree = styled.div`
   margin-top: 77px;
   margin-left: 245px;
+  padding-bottom: 110px;
   width: 277px;
   font-size: 16px;
   line-height: 22px;

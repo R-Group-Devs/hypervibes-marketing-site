@@ -10,7 +10,6 @@ const Container = styled.div<{ position: Props['position'] }>`
   top: ${({ position }) => (position === 'top' ? 0 : 'auto')};
   bottom: ${({ position }) => (position === 'bottom' ? 0 : 'auto')};
   left: 0;
-  margin-top: ${({ position }) => (position === 'top' ? '-72px' : 0)};
   padding: ${({ position }) =>
     position === 'top' ? '32px 0 100px 120px' : '32px 0 75px 120px'};
   display: flex;
@@ -69,15 +68,15 @@ export const Nav = ({ position = 'top' }: Props) => (
     </NavItem>
     <NavItem>
       <a
-        href="#contact-us"
+        href="#contribute"
         onClick={e => {
           e.preventDefault();
           document
-            .getElementById('contact-us')
+            .getElementById('contribute')
             ?.scrollIntoView({ behavior: 'smooth' });
         }}
       >
-        Contact Us
+        Contribute
       </a>
     </NavItem>
   </Container>
