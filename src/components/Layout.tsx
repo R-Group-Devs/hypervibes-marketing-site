@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import { lighten } from 'polished';
 import { GlobalStyle } from './GlobalStyle';
 import { Header } from './Header';
+import SocialLinks from './SocialLinks';
+import { Footer } from './Footer';
 import { colors } from '../constants/colors';
 import './fonts.css';
 
@@ -12,9 +14,7 @@ interface Props {
   width?: number;
 }
 
-const Root = styled.div`
-  padding-left: 145px;
-`;
+const Root = styled.div``;
 
 const Container = styled.div`
   color: ${lighten(0.83, colors.primary)};
@@ -30,20 +30,15 @@ const Content = styled.div`
   flex-direction: column;
 `;
 
-const Footer = styled.footer`
-  margin-top: 20px;
-`;
-
 export const Layout = ({ children }: Props) => {
   return (
     <Root>
       <GlobalStyle />
       <Container>
         <Header />
-        <Content>
-          {children}
-          <Footer />
-        </Content>
+        <SocialLinks />
+        <Content>{children}</Content>
+        <Footer />
       </Container>
     </Root>
   );

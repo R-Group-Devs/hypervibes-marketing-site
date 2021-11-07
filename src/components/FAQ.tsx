@@ -42,6 +42,7 @@ const questions = [
 
 const Container = styled.div`
   padding-top: 110px;
+  padding-bottom: 200px;
   padding-left: 145px;
   width: 100%;
   background: #090909;
@@ -83,7 +84,7 @@ const Item = styled.div`
 const Question = styled.div<{ isExpanded: boolean }>`
   margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
   margin-bottom: ${({ isExpanded }) => (isExpanded ? '32px' : 0)};
-  transition: all 0.2s;
+  transition: margin-left 0.2s;
 `;
 
 const Answer = styled.div<{ isExpanded: boolean }>`

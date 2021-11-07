@@ -13,6 +13,7 @@ import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`
   padding-top: 120px;
+  padding-left: 145px;
   width: 100%;
   min-height: 100vh;
   background: url(${circlesBg}) 0 0 no-repeat;
@@ -42,12 +43,11 @@ const Heading = styled.img``;
 
 const Bullets = styled.div`
   display: flex;
+  align-items: center;
   margin-left: 80px;
 `;
 
 const BulletOne = styled.div`
-  display: flex;
-  flex-direction: column;
   margin-top: 130px;
   font-size: 16px;
   line-height: 22px;
