@@ -31,6 +31,10 @@ export const GlobalStyle = createGlobalStyle`
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
   }
 
+  a {
+    color: #fff;
+  }
+
   ::selection {
     color: ${colors.primary};
     background: ${colors.accent};

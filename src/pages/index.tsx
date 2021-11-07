@@ -2,20 +2,33 @@ import React, { useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
+import { Nav } from '../components/Nav';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 import FAQ from '../components/FAQ';
 import arrowDown from '../assets/images/icons/arrow-down.svg';
 
+const OuterVideoContainer = styled.div`
+  position: relative;
+  height: 100vh;
+`;
+
 const VideoContainer = styled.div`
-  padding-bottom: 100px;
+  position: absolute;
+  padding-top: 55px;
+  height: 160vh;
   background: linear-gradient(#090909 70%, transparent 100%);
 `;
 
 const Video = styled.video`
   margin: 0 auto;
-  width: 90%;
+  width: 65%;
   display: block;
+`;
+
+const Overlays = styled.div`
+  position: relative;
+  top: 72px;
 `;
 
 const Description = styled.div`
@@ -51,23 +64,29 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <VideoContainer>
-        <Video autoPlay loop muted>
-          <source src="./stairway.mp4" type="video/mp4" />
-        </Video>
-      </VideoContainer>
+      <OuterVideoContainer>
+        <VideoContainer>
+          <Video autoPlay loop muted>
+            <source src="./stairway.webm" type="video/webm" />
+          </Video>
 
-      <Description>
-        <strong>Be the NFT Alchemist&mdash;</strong>
-        <br />
-        The possibilities are endless in the realms that you can imagine. What
-        would you do with that power?
-      </Description>
+          <Overlays>
+            <Nav />
 
-      <Scroll>
-        <ArrowDown src={arrowDown} alt="" />
-        Scroll
-      </Scroll>
+            <Description>
+              <strong>Be the NFT Alchemist&mdash;</strong>
+              <br />
+              The possibilities are endless in the realms that you can imagine.
+              What would you do with that power?
+            </Description>
+
+            <Scroll>
+              <ArrowDown src={arrowDown} alt="" />
+              Scroll
+            </Scroll>
+          </Overlays>
+        </VideoContainer>
+      </OuterVideoContainer>
 
       <Layout>
         <WhatIsHyperVibes />
