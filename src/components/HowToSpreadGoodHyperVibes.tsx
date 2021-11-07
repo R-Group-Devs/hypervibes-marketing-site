@@ -46,6 +46,7 @@ const Bullets = styled.div`
   display: flex;
   align-items: center;
   margin-left: 80px;
+  padding-bottom: 270px;
 `;
 
 const BulletOne = styled.div`

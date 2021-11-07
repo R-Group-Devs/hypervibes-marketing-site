@@ -23,7 +23,6 @@ const Container = styled.div`
 const InnerBackground = styled.div`
   padding-top: 60px;
   width: 100%;
-  height: 100vh;
   background: url(${starsBg}) 0 0 no-repeat;
   background-size: 1308px auto;
 `;
