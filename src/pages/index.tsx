@@ -15,7 +15,6 @@ const VideoContainer = styled.div`
 `;
 
 const Video = styled.video`
-  margin: 0 auto;
   padding: 0 19% 35%;
   width: 100%;
   display: block;
