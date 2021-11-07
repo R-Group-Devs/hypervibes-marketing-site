@@ -7,7 +7,7 @@ import githubIcon from '../assets/images/icons/github.svg';
 const Container = styled.div`
   position: fixed;
   bottom: 50px;
-  left: 32px;
+  left: 20px;
   display: flex;
   column-gap: 32px;
   transform: rotate(-90deg);

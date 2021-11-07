@@ -8,34 +8,23 @@ import FAQ from '../components/FAQ';
 import arrowDownIcon from '../assets/images/icons/arrow-down.svg';
 import soundOffIcon from '../assets/images/icons/sound-off.svg';
 
-const OuterVideoContainer = styled.div`
-  position: relative;
-  height: 100vh;
-`;
-
 const VideoContainer = styled.div`
-  position: absolute;
+  position: relative;
   padding-top: 75px;
   min-width: 100%;
-  height: 160vh;
-  min-height: 1200px;
-  background: linear-gradient(#090909 70%, transparent 100%);
 `;
 
 const Video = styled.video`
   margin: 0 auto;
-  width: 62%;
+  padding: 0 19% 35%;
+  width: 100%;
   display: block;
-`;
-
-const Overlays = styled.div`
-  position: relative;
-  top: 72px;
+  background: linear-gradient(#090909 60%, transparent 100%);
 `;
 
 const Description = styled.div`
   position: absolute;
-  bottom: 70px;
+  bottom: 45%;
   left: 120px;
   width: 308px;
   font-size: 16px;
@@ -45,8 +34,8 @@ const Description = styled.div`
 
 const Scroll = styled.div`
   position: absolute;
-  bottom: 27px;
-  left: 50%;
+  bottom: 40%;
+  left: 48%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -93,27 +82,23 @@ const IndexPage = () => {
   return (
     <>
       <SEO title="Home" />
-      <OuterVideoContainer>
-        <VideoContainer>
-          <Video autoPlay loop muted>
-            <source src="./stairway.webm" type="video/webm" />
-          </Video>
+      <VideoContainer>
+        <Video autoPlay loop muted>
+          <source src="./stairway.webm" type="video/webm" />
+        </Video>
 
-          <Overlays>
-            <Description>
-              <strong>Be the NFT Alchemist&mdash;</strong>
-              <br />
-              The possibilities are endless in the realms that you can imagine.
-              What would you do with that power?
-            </Description>
+        <Description>
+          <strong>Be the NFT Alchemist&mdash;</strong>
+          <br />
+          The possibilities are endless in the realms that you can imagine. What
+          would you do with that power?
+        </Description>
 
-            <Scroll>
-              <ArrowDown src={arrowDownIcon} alt="" />
-              Scroll
-            </Scroll>
-          </Overlays>
-        </VideoContainer>
-      </OuterVideoContainer>
+        <Scroll>
+          <ArrowDown src={arrowDownIcon} alt="" />
+          Scroll
+        </Scroll>
+      </VideoContainer>
 
       <Layout>
         <WhatIsHyperVibes />
