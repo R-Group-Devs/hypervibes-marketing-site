@@ -9,14 +9,32 @@ import weirdoWire from '../assets/images/weirdo-wire.png';
 
 const Container = styled.div`
   position: relative;
-  top: -400px;
+  top: -300px;
   margin-bottom: -400px;
   padding-top: 90px;
-  padding-left: 145px;
+  padding-left: 90px;
   width: 100%;
   background: url(${circlesBg}) 0 0 no-repeat;
-  background-size: 1004px auto;
-  background-position: 300px 210px;
+  background-size: 800px auto;
+  background-position: 200px 240px;
+
+  @media (min-width: 1080px) {
+    padding-left: 145px;
+  }
+
+  @media (min-width: 1260px) {
+    top: -400px;
+    background-size: 904px auto;
+    background-position: 200px 210px;
+  }
+
+  @media (min-width: 1400px) {
+    background-size: 1004px auto;
+  }
+
+  @media (min-width: 1500px) {
+    background-position: 300px 210px;
+  }
 `;
 
 const InnerBackground = styled.div`
@@ -33,41 +51,112 @@ const HeadingContainer = styled.div`
 
 const Eye = styled.img`
   margin: 5px 16px 0 0;
-  width: 47px;
+  width: 30px;
+
+  @media (min-width: 650px) {
+    width: 47px;
+  }
 `;
 
-const Heading = styled.img``;
+const Heading = styled.img`
+  width: 200px;
 
-const BulletOne = styled.div`
+  @media (min-width: 650px) {
+    width: 280px;
+  }
+
+  @media (min-width: 880px) {
+    width: auto;
+  }
+`;
+
+const Bullet = styled.div`
+  min-width: 300px;
+  position: relative;
+  left: 0;
+
+  @media (min-width: 1080px) {
+    left: -170px;
+  }
+
+  @media (min-width: 1260px) {
+    left: -100px;
+  }
+
+  @media (min-width: 1500px) {
+    left: 0;
+  }
+`;
+
+const BulletOne = styled(Bullet)`
   display: flex;
   margin-top: 130px;
-  margin-left: 145px;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: 1080px) {
+    margin-left: 145px;
+  }
 `;
 
-const BulletText = styled.div`
-  width: 277px;
-  font-size: 16px;
-  line-height: 22px;
-`;
-
-const BulletTwo = styled.div`
+const BulletTwo = styled(Bullet)`
   display: flex;
-  margin-top: 43px;
-  margin-left: 940px;
+  margin-top: 60px;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: 1080px) {
+    margin-top: -100px;
+    margin-left: 760px;
+  }
+
+  @media (min-width: 1260px) {
+    margin-top: 23px;
+    margin-left: 860px;
+  }
+
+  @media (min-width: 1400px) {
+    margin-top: 43px;
+    margin-left: 940px;
+  }
 `;
 
-const BulletThree = styled.div`
+const BulletThree = styled(Bullet)`
   display: flex;
-  margin-top: 77px;
-  margin-left: 245px;
+  margin-top: 60px;
   padding-bottom: 110px;
   font-size: 16px;
   line-height: 22px;
   text-align: right;
+
+  @media (min-width: 1080px) {
+    margin-top: 0;
+    margin-left: 245px;
+  }
+
+  @media (min-width: 1260px) {
+    margin-top: 27px;
+    margin-left: 145px;
+  }
+
+  @media (min-width: 1400px) {
+    margin-top: 77px;
+    margin-left: 245px;
+  }
+`;
+
+const BulletText = styled.div`
+  width: 50vw;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (min-width: 1080px) {
+    width: 200px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 277px;
+  }
 `;
 
 const Lathe = styled.img`

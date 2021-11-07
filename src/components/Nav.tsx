@@ -10,8 +10,7 @@ const Container = styled.div<{ position: Props['position'] }>`
   bottom: ${({ position }) => (position === 'bottom' ? 0 : 'auto')};
   left: 0;
   padding: ${({ position }) =>
-    position === 'top' ? '32px 0 100px 120px' : '32px 0 75px 120px'};
-  display: flex;
+    position === 'top' ? '32px 0 100px 90px' : '32px 0 75px 90px'};
   width: ${({ position }) => (position === 'top' ? '100%' : 'auto')};
   align-items: center;
   background: ${({ position }) =>
@@ -19,6 +18,15 @@ const Container = styled.div<{ position: Props['position'] }>`
       ? 'linear-gradient(#090909 50%, transparent 100%)'
       : 'none'};
   z-index: 1;
+  display: none;
+
+  @media (min-width: 1080px) {
+    padding-left: 120px;
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 `;
 
 const NavItem = styled.div`

@@ -12,32 +12,54 @@ import soundOffIcon from '../assets/images/icons/sound-off.svg';
 
 const StairsContainer = styled.div`
   position: relative;
-  padding-top: 75px;
+  padding-top: 50px;
   min-width: 100%;
+
+  @media (min-width: 768px) {
+    padding-top: 100px;
+  }
+
+  @media (min-width: 1170px) {
+    padding-top: 75px;
+  }
 `;
 
 const Video = styled.video`
-  padding: 0 19% 35%;
+  padding: 0 10% 50%;
   width: 100%;
   display: block;
   background: linear-gradient(#090909 60%, transparent 100%);
+
+  @media (min-width: 880px) {
+    padding: 0 19% 35%;
+  }
 `;
 
 const Description = styled.div`
   position: absolute;
   bottom: 45%;
   left: 120px;
-  width: 308px;
-  font-size: 16px;
-  line-height: 22px;
+  width: 228px;
+  font-size: 12px;
+  line-height: 18px;
   color: #fff;
+  display: none;
+
+  @media (min-width: 1170px) {
+    display: block;
+  }
+
+  @media (min-width: 1400px) {
+    width: 308px;
+    font-size: 16px;
+    line-height: 22px;
+  }
 `;
 
 const Scroll = styled.div`
   position: absolute;
-  bottom: 40%;
+  bottom: 37%;
   left: 48%;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -45,6 +67,15 @@ const Scroll = styled.div`
   font-size: 6px;
   color: #17ffe3;
   z-index: 2;
+  display: none;
+
+  @media (min-width: 1170px) {
+    display: flex;
+  }
+
+  @media (min-width: 1400px) {
+    bottom: 40%;
+  }
 `;
 
 const ArrowDown = styled.img`
