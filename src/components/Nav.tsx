@@ -29,16 +29,56 @@ const NavItem = styled.div`
 export const Nav = ({ position = 'top' }: Props) => (
   <Container position={position}>
     <NavItem>
-      <a href="#what-is">What Is</a>
+      <a
+        href="#what-is"
+        onClick={e => {
+          e.preventDefault();
+          document
+            .getElementById('what-is')
+            ?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        What Is
+      </a>
     </NavItem>
     <NavItem>
-      <a href="#how-to">How To</a>
+      <a
+        href="#how-to"
+        onClick={e => {
+          e.preventDefault();
+          document
+            .getElementById('how-to')
+            ?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        How To
+      </a>
     </NavItem>
     <NavItem>
-      <a href="#faq">FAQ</a>
+      <a
+        href="#faq"
+        onClick={e => {
+          e.preventDefault();
+          document
+            .getElementById('faq')
+            ?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        FAQ
+      </a>
     </NavItem>
     <NavItem>
-      <a href="#contact-us">Contact Us</a>
+      <a
+        href="#contact-us"
+        onClick={e => {
+          e.preventDefault();
+          document
+            .getElementById('contact-us')
+            ?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        Contact Us
+      </a>
     </NavItem>
   </Container>
 );

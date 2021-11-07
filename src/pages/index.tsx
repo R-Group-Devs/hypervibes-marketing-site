@@ -45,7 +45,7 @@ const Description = styled.div`
 
 const Scroll = styled.div`
   position: absolute;
-  bottom: 30px;
+  bottom: 27px;
   left: 50%;
   display: flex;
   flex-direction: column;
