@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import heading from '../assets/images/headings/faq.svg';
 // @ts-ignore
 import lightbulb from '../assets/images/lightbulb.png';
+// @ts-ignore
+import answerIcon from '../assets/images/icons/answer.svg';
 
 const questions = [
   {
@@ -81,7 +83,7 @@ const Question = styled.div<{ isExpanded: boolean }>`
   margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
   padding: 40px 0;
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '32px' : '40px')};
-  transition: margin-left 0.2s;
+  transition: margin-left 0.2s, color 0.2s;
 
   &:hover {
     color: #fff;
@@ -90,13 +92,19 @@ const Question = styled.div<{ isExpanded: boolean }>`
 `;
 
 const Answer = styled.div<{ isExpanded: boolean }>`
-  margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
+  display: flex;
+  align-items: center;
+  margin-left: ${({ isExpanded }) => (isExpanded ? '63px' : 0)};
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '40px' : 0)};
   transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
   transform-origin: center left;
   transition: transform 0.2s, margin-left 0.2s;
   font-size: 16px;
   color: #bcff67;
+`;
+
+const AnswerIcon = styled.img`
+  margin-right: 32px;
 `;
 
 const FAQ = () => {
@@ -132,7 +140,12 @@ const FAQ = () => {
               {item.question}
             </Question>
             <Answer isExpanded={expandedItem === index}>
-              {expandedItem === index && item.answer}
+              {expandedItem === index && (
+                <>
+                  <AnswerIcon src={answerIcon} alt="" />
+                  <span>{item.answer}</span>
+                </>
+              )}
             </Answer>
           </Item>
         ))}

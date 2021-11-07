@@ -15,7 +15,10 @@ const Container = styled.div<{ position: Props['position'] }>`
   display: flex;
   width: ${({ position }) => (position === 'top' ? '100%' : 'auto')};
   align-items: center;
-  background: linear-gradient(#090909 50%, transparent 100%);
+  background: ${({ position }) =>
+    position === 'top'
+      ? 'linear-gradient(#090909 50%, transparent 100%)'
+      : 'none'};
   z-index: 1;
 `;
 

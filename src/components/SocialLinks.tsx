@@ -13,7 +13,7 @@ const Container = styled.div`
   transform: rotate(-90deg);
   transform-origin: top left;
   opacity: 0.5;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export default () => (
