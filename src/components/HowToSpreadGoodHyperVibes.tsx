@@ -14,7 +14,7 @@ import lathe from '../assets/images/lathe.png';
 const Container = styled.div`
   padding-top: 120px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url(${circlesBg}) 0 0 no-repeat;
   background-size: 1004px auto;
   background-position: 300px 290px;
@@ -23,7 +23,7 @@ const Container = styled.div`
 const InnerBackground = styled.div`
   padding-top: 60px;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background: url(${starsBg}) 0 0 no-repeat;
   background-size: 1308px auto;
 `;

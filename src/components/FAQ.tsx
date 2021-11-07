@@ -5,7 +5,7 @@ import heading from '../assets/images/headings/faq.svg';
 // @ts-ignore
 import lightbulb from '../assets/images/lightbulb.png';
 
-const FAQ = [
+const questions = [
   {
     question: 'This is an example of a question?',
     answer: 'This is an an example of an answer.',
@@ -82,16 +82,20 @@ const Item = styled.div`
 
 const Question = styled.div<{ isExpanded: boolean }>`
   margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
+  margin-bottom: ${({ isExpanded }) => (isExpanded ? '32px' : 0)};
+  transition: all 0.2s;
 `;
 
 const Answer = styled.div<{ isExpanded: boolean }>`
-  display: ${({ isExpanded }) => (isExpanded ? 'block' : 'none')};
-  margin-top: 32px;
   margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
+  transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
+  position: ${({ isExpanded }) => (isExpanded ? 'static' : 'absolute')};
+  transform-origin: center left;
+  transition: all 0.2s;
   color: #bcff67;
 `;
 
-const WhatIsHyperVibes = () => {
+const FAQ = () => {
   const [expandedItem, setExpandedItem] = useState<number>();
 
   const toggle = useCallback(
@@ -115,7 +119,7 @@ const WhatIsHyperVibes = () => {
       </HeadingContainer>
 
       <Questions>
-        {FAQ.map((item, index) => (
+        {questions.map((item, index) => (
           <Item key={index} onClick={() => toggle(index)}>
             <Question isExpanded={expandedItem === index}>
               {item.question}
@@ -128,4 +132,4 @@ const WhatIsHyperVibes = () => {
   );
 };
 
-export default WhatIsHyperVibes;
+export default FAQ;
