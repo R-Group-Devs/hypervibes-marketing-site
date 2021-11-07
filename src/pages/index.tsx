@@ -241,36 +241,36 @@ const IndexPage = () => {
           }}
         />
 
-        <audio ref={stairOneSound}>
+        <audio ref={stairOneSound} preload="auto">
           <source src="./stair-1.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairTwoSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairTwoSound} preload="auto">
+          <source src="./stair-2.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairThreeSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairThreeSound} preload="auto">
+          <source src="./stair-3.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairFourSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairFourSound} preload="auto">
+          <source src="./stair-4.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairFiveSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairFiveSound} preload="auto">
+          <source src="./stair-5.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairSixSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairSixSound} preload="auto">
+          <source src="./stair-6.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairSevenSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairSevenSound} preload="auto">
+          <source src="./stair-6.mp3" type="audio/mpeg" />
         </audio>
 
-        <audio ref={stairEightSound}>
-          <source src="./stair-1.mp3" type="audio/mpeg" />
+        <audio ref={stairEightSound} preload="auto">
+          <source src="./stair-6.mp3" type="audio/mpeg" />
         </audio>
       </VideoContainer>
 
@@ -297,7 +297,7 @@ const IndexPage = () => {
         </SoundToggleText>
       </SoundToggle>
 
-      <audio ref={backgroundMusic} loop>
+      <audio ref={backgroundMusic} loop preload="auto">
         <source src="./hypervibes.mp3" type="audio/mpeg" />
       </audio>
     </>
