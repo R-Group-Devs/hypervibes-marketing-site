@@ -6,13 +6,14 @@ interface Props {
 }
 
 const Container = styled.div<{ position: Props['position'] }>`
-  position: ${({ position }) => (position === 'top' ? 'sticky' : 'absolute')};
+  position: ${({ position }) => (position === 'top' ? 'fixed' : 'absolute')};
   top: ${({ position }) => (position === 'top' ? 0 : 'auto')};
   bottom: ${({ position }) => (position === 'bottom' ? 0 : 'auto')};
   left: 0;
   padding: ${({ position }) =>
     position === 'top' ? '32px 0 100px 120px' : '32px 0 75px 120px'};
   display: flex;
+  width: ${({ position }) => (position === 'top' ? '100%' : 'auto')};
   align-items: center;
   background: linear-gradient(#090909 50%, transparent 100%);
   z-index: 1;

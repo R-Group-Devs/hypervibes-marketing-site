@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
-import { Nav } from '../components/Nav';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 import FAQ from '../components/FAQ';
@@ -16,7 +15,7 @@ const OuterVideoContainer = styled.div`
 
 const VideoContainer = styled.div`
   position: absolute;
-  padding-top: 45px;
+  padding-top: 75px;
   min-width: 100%;
   height: 160vh;
   min-height: 1200px;
@@ -25,7 +24,7 @@ const VideoContainer = styled.div`
 
 const Video = styled.video`
   margin: 0 auto;
-  width: 65%;
+  width: 62%;
   display: block;
 `;
 
@@ -36,9 +35,9 @@ const Overlays = styled.div`
 
 const Description = styled.div`
   position: absolute;
-  bottom: 90px;
+  bottom: 70px;
   left: 120px;
-  width: 277px;
+  width: 308px;
   font-size: 16px;
   line-height: 22px;
   color: #fff;
@@ -113,7 +112,6 @@ const IndexPage = () => {
               Scroll
             </Scroll>
           </Overlays>
-          <Nav />
         </VideoContainer>
       </OuterVideoContainer>
 
