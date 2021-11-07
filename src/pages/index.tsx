@@ -16,7 +16,7 @@ const OuterVideoContainer = styled.div`
 
 const VideoContainer = styled.div`
   position: absolute;
-  padding-top: 55px;
+  padding-top: 45px;
   height: 160vh;
   min-height: 1200px;
   background: linear-gradient(#090909 70%, transparent 100%);
@@ -65,8 +65,8 @@ const ArrowDown = styled.img`
 
 const SoundToggle = styled.div`
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 32px;
+  right: 32px;
   width: 95px;
   display: flex;
   align-items: center;
