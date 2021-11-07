@@ -3,7 +3,7 @@ import { colors } from '../constants/colors';
 
 export const GlobalStyle = createGlobalStyle`
   * {
-    border-sizing: border-box;
+    box-sizing: border-box;
   }
 
   html {
@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    padding-top: 69px;
     background: linear-gradient(#090909 30%, #193c36 100%);
     background-attachment: fixed;
     font-family: 'Decima Mono', 'Courier New', Courier, monospace;

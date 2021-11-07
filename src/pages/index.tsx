@@ -2,47 +2,45 @@ import React, { useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
-// @ts-ignore
-import speRuntime from '../lib/runtime';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
+import FAQ from '../components/FAQ';
 
-const CanvasContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 200px;
+const Video = styled.video`
   width: 100%;
-  background: #090909;
 `;
 
-const Canvas = styled.canvas`
-  margin-left: -90px;
-  width: auto !important;
-  height: 80vh !important;
+const Description = styled.div`
+  position: absolute;
+  bottom: 90px;
+  left: 120px;
+  width: 277px;
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
 `;
-
-const SpeRuntime = speRuntime();
-// @ts-ignore
-const app = new SpeRuntime.Application();
 
 const IndexPage = () => {
-  useLayoutEffect(() => {
-    // @ts-ignore
-    app.start('./scene.json');
-  }, []);
-
   return (
     <>
       <SEO title="Home" />
-      <CanvasContainer>
-        <Canvas id="canvas3d"></Canvas>
-      </CanvasContainer>
+      <Video autoPlay loop muted>
+        <source src="./stairway.mp4" type="video/mp4" />
+      </Video>
+
+      <Description>
+        <strong>Be the NFT Alchemist&mdash;</strong>
+        <br />
+        The possibilities are endless in the realms that you can imagine. What
+        would you do with that power?
+      </Description>
 
       <Layout>
         <WhatIsHyperVibes />
         <HowToSpreadGoodHyperVibes />
       </Layout>
+
+      <FAQ />
     </>
   );
 };

@@ -17,7 +17,7 @@ const Container = styled.div`
   height: 100vh;
   background: url(${circlesBg}) 0 0 no-repeat;
   background-size: 1004px auto;
-  background-position: 300px 210px;
+  background-position: 300px 290px;
 `;
 
 const InnerBackground = styled.div`
@@ -49,6 +49,8 @@ const BulletOne = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 130px;
+  font-size: 16px;
+  line-height: 22px;
   margin-right: 90px;
 `;
 

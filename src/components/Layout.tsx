@@ -17,7 +17,6 @@ const Root = styled.div`
 `;
 
 const Container = styled.div`
-  max-height: 100vh;
   color: ${lighten(0.83, colors.primary)};
 `;
 
