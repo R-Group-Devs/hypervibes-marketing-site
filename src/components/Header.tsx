@@ -14,6 +14,7 @@ const LaunchApp = styled.a`
   color: #fff;
   text-decoration: none;
   z-index: 2;
+  display: none;
 
   &:hover {
     border-bottom: 1px solid #fff;

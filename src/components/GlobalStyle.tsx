@@ -34,6 +34,12 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      padding-bottom: 6px;
+      border-bottom: 1px solid #fff;
+    }
   }
 
   ::selection {
