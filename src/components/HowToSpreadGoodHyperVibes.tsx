@@ -1,14 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-// @ts-ignore
 import heading from '../assets/images/headings/how-to-spread-good-hypervibes.svg';
-// @ts-ignore
 import glacier from '../assets/images/glacier.png';
-// @ts-ignore
 import circlesBg from '../assets/images/circles-bg.png';
-// @ts-ignore
 import starsBg from '../assets/images/stars-bg.png';
-// @ts-ignore
 import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`

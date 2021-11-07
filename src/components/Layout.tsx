@@ -1,4 +1,3 @@
-import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 import { lighten } from 'polished';
@@ -7,7 +6,6 @@ import { Header } from './Header';
 import SocialLinks from './SocialLinks';
 import { Footer } from './Footer';
 import { colors } from '../constants/colors';
-import './fonts.css';
 
 interface Props {
   children: React.ReactNode;

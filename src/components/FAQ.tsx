@@ -1,10 +1,7 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import styled from 'styled-components';
-// @ts-ignore
 import heading from '../assets/images/headings/faq.svg';
-// @ts-ignore
 import lightbulb from '../assets/images/lightbulb.png';
-// @ts-ignore
 import answerIcon from '../assets/images/icons/answer.svg';
 
 const questions = [

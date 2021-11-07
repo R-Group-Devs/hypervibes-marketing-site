@@ -1,16 +1,16 @@
-import React, { useState, useRef } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 import FAQ from '../components/FAQ';
-// @ts-ignore
+import { StairSFX } from '../components/StairSFX';
+import { BackgroundMusic } from '../components/BackgroundMusic';
 import arrowDownIcon from '../assets/images/icons/arrow-down.svg';
-// @ts-ignore
 import soundOffIcon from '../assets/images/icons/sound-off.svg';
 
-const VideoContainer = styled.div`
+const StairsContainer = styled.div`
   position: relative;
   padding-top: 75px;
   min-width: 100%;
@@ -76,90 +76,13 @@ const SoundToggleText = styled.div`
   color: #fff;
 `;
 
-const Stair = styled.div`
-  position: absolute;
-`;
-
-const StairOne = styled(Stair)`
-  position: absolute;
-  top: 50%;
-  left: 30%;
-  width: 23%;
-  height: 5%;
-`;
-
-const StairTwo = styled(Stair)`
-  position: absolute;
-  top: 43%;
-  left: 33%;
-  width: 16%;
-  height: 5%;
-`;
-
-const StairThree = styled(Stair)`
-  position: absolute;
-  top: 35%;
-  left: 36%;
-  width: 15%;
-  height: 4%;
-`;
-
-const StairFour = styled(Stair)`
-  position: absolute;
-  top: 30%;
-  left: 39%;
-  width: 16%;
-  height: 4%;
-`;
-
-const StairFive = styled(Stair)`
-  position: absolute;
-  top: 25.5%;
-  left: 46%;
-  width: 13%;
-  height: 4%;
-`;
-
-const StairSix = styled(Stair)`
-  position: absolute;
-  top: 21.5%;
-  left: 53%;
-  width: 12%;
-  height: 3.5%;
-`;
-
-const StairSeven = styled(Stair)`
-  position: absolute;
-  top: 16.5%;
-  left: 55%;
-  width: 13%;
-  height: 3.5%;
-`;
-
-const StairEight = styled(Stair)`
-  position: absolute;
-  top: 11%;
-  left: 62%;
-  width: 13%;
-  height: 4.5%;
-`;
-
 const IndexPage = () => {
-  const backgroundMusic = useRef<HTMLAudioElement>(null);
   const [isSoundOn, setIsSoundOn] = useState(false);
-  const stairOneSound = useRef<HTMLAudioElement>(null);
-  const stairTwoSound = useRef<HTMLAudioElement>(null);
-  const stairThreeSound = useRef<HTMLAudioElement>(null);
-  const stairFourSound = useRef<HTMLAudioElement>(null);
-  const stairFiveSound = useRef<HTMLAudioElement>(null);
-  const stairSixSound = useRef<HTMLAudioElement>(null);
-  const stairSevenSound = useRef<HTMLAudioElement>(null);
-  const stairEightSound = useRef<HTMLAudioElement>(null);
 
   return (
     <>
       <SEO title="Home" />
-      <VideoContainer>
+      <StairsContainer>
         <Video autoPlay loop muted>
           <source src="./stairway.webm" type="video/webm" />
         </Video>
@@ -176,103 +99,9 @@ const IndexPage = () => {
           Scroll
         </Scroll>
 
-        <StairOne
-          onMouseEnter={() => {
-            if (isSoundOn && stairOneSound.current) {
-              stairOneSound.current.currentTime = 0;
-              stairOneSound.current?.play();
-            }
-          }}
-        />
-        <StairTwo
-          onMouseEnter={() => {
-            if (isSoundOn && stairTwoSound.current) {
-              stairTwoSound.current.currentTime = 0;
-              stairTwoSound.current?.play();
-            }
-          }}
-        />
-        <StairThree
-          onMouseEnter={() => {
-            if (isSoundOn && stairThreeSound.current) {
-              stairThreeSound.current.currentTime = 0;
-              stairThreeSound.current?.play();
-            }
-          }}
-        />
-        <StairFour
-          onMouseEnter={() => {
-            if (isSoundOn && stairFourSound.current) {
-              stairFourSound.current.currentTime = 0;
-              stairFourSound.current?.play();
-            }
-          }}
-        />
-        <StairFive
-          onMouseEnter={() => {
-            if (isSoundOn && stairFiveSound.current) {
-              stairFiveSound.current.currentTime = 0;
-              stairFiveSound.current?.play();
-            }
-          }}
-        />
-        <StairSix
-          onMouseEnter={() => {
-            if (isSoundOn && stairSixSound.current) {
-              stairSixSound.current.currentTime = 0;
-              stairSixSound.current?.play();
-            }
-          }}
-        />
-        <StairSeven
-          onMouseEnter={() => {
-            if (isSoundOn && stairSevenSound.current) {
-              stairSevenSound.current.currentTime = 0;
-              stairSevenSound.current?.play();
-            }
-          }}
-        />
-        <StairEight
-          onMouseEnter={() => {
-            if (isSoundOn && stairEightSound.current) {
-              stairEightSound.current.currentTime = 0;
-              stairEightSound.current?.play();
-            }
-          }}
-        />
-
-        <audio ref={stairOneSound} preload="auto">
-          <source src="./stair-1.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairTwoSound} preload="auto">
-          <source src="./stair-2.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairThreeSound} preload="auto">
-          <source src="./stair-3.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairFourSound} preload="auto">
-          <source src="./stair-4.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairFiveSound} preload="auto">
-          <source src="./stair-5.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairSixSound} preload="auto">
-          <source src="./stair-6.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairSevenSound} preload="auto">
-          <source src="./stair-6.mp3" type="audio/mpeg" />
-        </audio>
-
-        <audio ref={stairEightSound} preload="auto">
-          <source src="./stair-6.mp3" type="audio/mpeg" />
-        </audio>
-      </VideoContainer>
+        <StairSFX isSoundOn={isSoundOn} />
+        <BackgroundMusic isSoundOn={isSoundOn} />
+      </StairsContainer>
 
       <Layout>
         <WhatIsHyperVibes />
@@ -280,26 +109,12 @@ const IndexPage = () => {
         <FAQ />
       </Layout>
 
-      <SoundToggle
-        onClick={() => {
-          if (isSoundOn) {
-            backgroundMusic.current?.pause();
-            setIsSoundOn(false);
-          } else {
-            backgroundMusic.current?.play();
-            setIsSoundOn(true);
-          }
-        }}
-      >
+      <SoundToggle onClick={() => setIsSoundOn(!isSoundOn)}>
         <img src={soundOffIcon} alt="" />
         <SoundToggleText>
           {isSoundOn ? 'Sound On' : 'Sound Off'}
         </SoundToggleText>
       </SoundToggle>
-
-      <audio ref={backgroundMusic} loop preload="auto">
-        <source src="./hypervibes.mp3" type="audio/mpeg" />
-      </audio>
     </>
   );
 };

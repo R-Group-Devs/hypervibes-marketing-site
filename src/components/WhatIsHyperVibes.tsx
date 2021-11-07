@@ -1,14 +1,8 @@
-import React from 'react';
 import styled from 'styled-components';
-// @ts-ignore
 import heading from '../assets/images/headings/what-is-hypervibes.svg';
-// @ts-ignore
 import eye from '../assets/images/eye.png';
-// @ts-ignore
 import circlesBg from '../assets/images/circles-bg.png';
-// @ts-ignore
 import starsBg from '../assets/images/stars-bg.png';
-// @ts-ignore
 import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`

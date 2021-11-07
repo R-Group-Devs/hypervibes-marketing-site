@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import discordIcon from '../assets/images/icons/discord.svg';
 import twitterIcon from '../assets/images/icons/twitter.svg';
