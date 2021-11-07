@@ -74,9 +74,85 @@ const SoundToggleText = styled.div`
   color: #fff;
 `;
 
+const Stair = styled.div`
+  position: absolute;
+`;
+
+const StairOne = styled(Stair)`
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  width: 23%;
+  height: 5%;
+`;
+
+const StairTwo = styled(Stair)`
+  position: absolute;
+  top: 43%;
+  left: 33%;
+  width: 16%;
+  height: 5%;
+`;
+
+const StairThree = styled(Stair)`
+  position: absolute;
+  top: 35%;
+  left: 36%;
+  width: 15%;
+  height: 4%;
+`;
+
+const StairFour = styled(Stair)`
+  position: absolute;
+  top: 30%;
+  left: 39%;
+  width: 16%;
+  height: 4%;
+`;
+
+const StairFive = styled(Stair)`
+  position: absolute;
+  top: 25.5%;
+  left: 46%;
+  width: 13%;
+  height: 4%;
+`;
+
+const StairSix = styled(Stair)`
+  position: absolute;
+  top: 21.5%;
+  left: 53%;
+  width: 12%;
+  height: 3.5%;
+`;
+
+const StairSeven = styled(Stair)`
+  position: absolute;
+  top: 16.5%;
+  left: 55%;
+  width: 13%;
+  height: 3.5%;
+`;
+
+const StairEight = styled(Stair)`
+  position: absolute;
+  top: 11%;
+  left: 62%;
+  width: 13%;
+  height: 4.5%;
+`;
+
 const IndexPage = () => {
-  const audio = useRef<HTMLAudioElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
+  const backgroundMusic = useRef<HTMLAudioElement>(null);
+  const [isSoundOn, setIsSoundOn] = useState(false);
+  const stairOneSound = useRef<HTMLAudioElement>(null);
+  const stairTwoSound = useRef<HTMLAudioElement>(null);
+  const stairThreeSound = useRef<HTMLAudioElement>(null);
+  const stairFourSound = useRef<HTMLAudioElement>(null);
+  const stairFiveSound = useRef<HTMLAudioElement>(null);
+  const stairSixSound = useRef<HTMLAudioElement>(null);
+  const stairSevenSound = useRef<HTMLAudioElement>(null);
+  const stairEightSound = useRef<HTMLAudioElement>(null);
 
   return (
     <>
@@ -97,6 +173,63 @@ const IndexPage = () => {
           <ArrowDown src={arrowDownIcon} alt="" />
           Scroll
         </Scroll>
+
+        <StairOne
+          onMouseEnter={() => isSoundOn && stairOneSound.current?.play()}
+        />
+        <StairTwo
+          onMouseEnter={() => isSoundOn && stairTwoSound.current?.play()}
+        />
+        <StairThree
+          onMouseEnter={() => isSoundOn && stairThreeSound.current?.play()}
+        />
+        <StairFour
+          onMouseEnter={() => isSoundOn && stairFourSound.current?.play()}
+        />
+        <StairFive
+          onMouseEnter={() => isSoundOn && stairFiveSound.current?.play()}
+        />
+        <StairSix
+          onMouseEnter={() => isSoundOn && stairSixSound.current?.play()}
+        />
+        <StairSeven
+          onMouseEnter={() => isSoundOn && stairSevenSound.current?.play()}
+        />
+        <StairEight
+          onMouseEnter={() => isSoundOn && stairEightSound.current?.play()}
+        />
+
+        <audio ref={stairOneSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairTwoSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairThreeSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairFourSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairFiveSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairSixSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairSevenSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
+
+        <audio ref={stairEightSound}>
+          <source src="./stair-1.mp3" type="audio/mpeg" />
+        </audio>
       </VideoContainer>
 
       <Layout>
@@ -107,22 +240,22 @@ const IndexPage = () => {
 
       <SoundToggle
         onClick={() => {
-          if (audio.current?.paused) {
-            audio.current?.play();
-            setIsPlaying(true);
+          if (isSoundOn) {
+            backgroundMusic.current?.pause();
+            setIsSoundOn(false);
           } else {
-            audio.current?.pause();
-            setIsPlaying(false);
+            backgroundMusic.current?.play();
+            setIsSoundOn(true);
           }
         }}
       >
         <img src={soundOffIcon} alt="" />
         <SoundToggleText>
-          {isPlaying ? 'Sound On' : 'Sound Off'}
+          {isSoundOn ? 'Sound On' : 'Sound Off'}
         </SoundToggleText>
       </SoundToggle>
 
-      <audio ref={audio} loop>
+      <audio ref={backgroundMusic} loop>
         <source src="./hypervibes.mp3" type="audio/mpeg" />
       </audio>
     </>
