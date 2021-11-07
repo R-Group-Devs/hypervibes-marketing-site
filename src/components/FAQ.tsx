@@ -70,11 +70,18 @@ const Questions = styled.div`
 `;
 
 const Item = styled.div`
-  padding: 40px 0;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid #17ffe3;
   transition: color 0.2s;
+  overflow: hidden;
+`;
+
+const Question = styled.div<{ isExpanded: boolean }>`
+  margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
+  padding: 40px 0;
+  padding-bottom: ${({ isExpanded }) => (isExpanded ? '32px' : '40px')};
+  transition: margin-left 0.2s;
 
   &:hover {
     color: #fff;
@@ -82,16 +89,10 @@ const Item = styled.div`
   }
 `;
 
-const Question = styled.div<{ isExpanded: boolean }>`
-  margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
-  margin-bottom: ${({ isExpanded }) => (isExpanded ? '32px' : 0)};
-  transition: margin-left 0.2s;
-`;
-
 const Answer = styled.div<{ isExpanded: boolean }>`
   margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
+  padding-bottom: ${({ isExpanded }) => (isExpanded ? '40px' : 0)};
   transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
-  position: ${({ isExpanded }) => (isExpanded ? 'static' : 'absolute')};
   transform-origin: center left;
   transition: all 0.2s;
   font-size: 16px;
@@ -123,11 +124,16 @@ const FAQ = () => {
 
       <Questions>
         {questions.map((item, index) => (
-          <Item key={index} onClick={() => toggle(index)}>
-            <Question isExpanded={expandedItem === index}>
+          <Item key={index}>
+            <Question
+              isExpanded={expandedItem === index}
+              onClick={() => toggle(index)}
+            >
               {item.question}
             </Question>
-            <Answer isExpanded={expandedItem === index}>{item.answer}</Answer>
+            <Answer isExpanded={expandedItem === index}>
+              {expandedItem === index && item.answer}
+            </Answer>
           </Item>
         ))}
       </Questions>
