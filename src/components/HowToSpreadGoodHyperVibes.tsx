@@ -3,7 +3,9 @@ import heading from '../assets/images/headings/how-to-spread-good-hypervibes.svg
 import glacier from '../assets/images/glacier.png';
 import circlesBg from '../assets/images/circles-bg.png';
 import starsBg from '../assets/images/stars-bg.png';
-import lathe from '../assets/images/lathe.png';
+import decentralizedCuration from '../assets/images/decentralized-curation.png';
+import tokenDistribution from '../assets/images/token-distribution.png';
+import governanceXNft from '../assets/images/governance-x-nft.png';
 
 const Container = styled.div`
   padding-top: 90px;
@@ -76,10 +78,10 @@ const BulletTitle = styled.div`
   color: #17ffe3;
 `;
 
-const Lathe = styled.img`
+const Image = styled.img`
   position: relative;
-  top: -30px;
-  width: 133px;
+  top: 10px;
+  width: 280px;
   height: auto;
 `;
 
@@ -95,7 +97,7 @@ const HowToSpreadGoodHyperVibes = () => (
 
       <Bullets>
         <BulletOne>
-          <Lathe src={lathe} alt="" />
+          <Image src={decentralizedCuration} alt="" />
           <BulletText>
             <BulletTitle>Decentralized Curation</BulletTitle>
             <p>
@@ -106,7 +108,7 @@ const HowToSpreadGoodHyperVibes = () => (
         </BulletOne>
 
         <BulletTwo>
-          <Lathe src={lathe} alt="" />
+          <Image src={tokenDistribution} alt="" />
           <BulletText>
             <BulletTitle>Token Distribution</BulletTitle>
             <p>
@@ -117,7 +119,7 @@ const HowToSpreadGoodHyperVibes = () => (
         </BulletTwo>
 
         <BulletThree>
-          <Lathe src={lathe} alt="" />
+          <Image src={governanceXNft} alt="" />
           <BulletText>
             <BulletTitle>Governance x NFT</BulletTitle>
             <p>

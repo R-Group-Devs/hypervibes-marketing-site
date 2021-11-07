@@ -40,8 +40,9 @@ const questions = [
 ];
 
 const Container = styled.div`
+  margin-top: -150px;
   padding-top: 150px;
-  padding-bottom: 200px;
+  padding-bottom: 150px;
   padding-left: 145px;
   width: 100%;
   background: #090909;
