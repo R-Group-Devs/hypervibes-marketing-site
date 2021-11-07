@@ -177,28 +177,68 @@ const IndexPage = () => {
         </Scroll>
 
         <StairOne
-          onMouseEnter={() => isSoundOn && stairOneSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairOneSound.current) {
+              stairOneSound.current.currentTime = 0;
+              stairOneSound.current?.play();
+            }
+          }}
         />
         <StairTwo
-          onMouseEnter={() => isSoundOn && stairTwoSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairTwoSound.current) {
+              stairTwoSound.current.currentTime = 0;
+              stairTwoSound.current?.play();
+            }
+          }}
         />
         <StairThree
-          onMouseEnter={() => isSoundOn && stairThreeSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairThreeSound.current) {
+              stairThreeSound.current.currentTime = 0;
+              stairThreeSound.current?.play();
+            }
+          }}
         />
         <StairFour
-          onMouseEnter={() => isSoundOn && stairFourSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairFourSound.current) {
+              stairFourSound.current.currentTime = 0;
+              stairFourSound.current?.play();
+            }
+          }}
         />
         <StairFive
-          onMouseEnter={() => isSoundOn && stairFiveSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairFiveSound.current) {
+              stairFiveSound.current.currentTime = 0;
+              stairFiveSound.current?.play();
+            }
+          }}
         />
         <StairSix
-          onMouseEnter={() => isSoundOn && stairSixSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairSixSound.current) {
+              stairSixSound.current.currentTime = 0;
+              stairSixSound.current?.play();
+            }
+          }}
         />
         <StairSeven
-          onMouseEnter={() => isSoundOn && stairSevenSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairSevenSound.current) {
+              stairSevenSound.current.currentTime = 0;
+              stairSevenSound.current?.play();
+            }
+          }}
         />
         <StairEight
-          onMouseEnter={() => isSoundOn && stairEightSound.current?.play()}
+          onMouseEnter={() => {
+            if (isSoundOn && stairEightSound.current) {
+              stairEightSound.current.currentTime = 0;
+              stairEightSound.current?.play();
+            }
+          }}
         />
 
         <audio ref={stairOneSound}>
