@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import heading from '../assets/images/headings/faq.svg';
 import lightbulb from '../assets/images/lightbulb.png';
 import answerIcon from '../assets/images/icons/answer.svg';
+import faqTile from '../assets/images/faq-tile.svg';
 
 const questions = [
   {
@@ -56,6 +57,13 @@ const HeadingContainer = styled.div`
 `;
 
 const Heading = styled.img``;
+
+const FaqTile = styled.div`
+  margin-left: 22px;
+  background: url(${faqTile}) 0 0 repeat-x;
+  width: 100%;
+  height: 60px;
+`;
 
 const Lightbulb = styled.img`
   position: relative;
@@ -126,6 +134,7 @@ const FAQ = () => {
           <Lightbulb src={lightbulb} alt="" />
         </div>
         <Heading src={heading} alt="FAQ" />
+        <FaqTile />
       </HeadingContainer>
 
       <Questions>

@@ -8,6 +8,7 @@ import tokenDistribution from '../assets/images/token-distribution.png';
 import governanceXNft from '../assets/images/governance-x-nft.png';
 
 const Container = styled.div`
+  margin-top: -90px;
   padding-top: 90px;
   padding-left: 145px;
   width: 100%;
@@ -45,14 +46,14 @@ const Bullets = styled.div`
 `;
 
 const BulletOne = styled.div`
-  margin-top: 130px;
+  margin-top: 70px;
   font-size: 16px;
   line-height: 22px;
   margin-right: 90px;
 `;
 
 const BulletTwo = styled.div`
-  margin-top: 130px;
+  margin-top: 70px;
   width: 277px;
   font-size: 16px;
   line-height: 22px;
@@ -60,7 +61,7 @@ const BulletTwo = styled.div`
 `;
 
 const BulletThree = styled.div`
-  margin-top: 130px;
+  margin-top: 70px;
   width: 277px;
   font-size: 16px;
   line-height: 22px;
