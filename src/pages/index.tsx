@@ -5,7 +5,9 @@ import { SEO } from '../components/SEO';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 import FAQ from '../components/FAQ';
+// @ts-ignore
 import arrowDownIcon from '../assets/images/icons/arrow-down.svg';
+// @ts-ignore
 import soundOffIcon from '../assets/images/icons/sound-off.svg';
 
 const VideoContainer = styled.div`

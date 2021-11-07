@@ -94,7 +94,7 @@ const Answer = styled.div<{ isExpanded: boolean }>`
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '40px' : 0)};
   transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
   transform-origin: center left;
-  transition: all 0.2s;
+  transition: transform 0.2s, margin-left 0.2s;
   font-size: 16px;
   color: #bcff67;
 `;
