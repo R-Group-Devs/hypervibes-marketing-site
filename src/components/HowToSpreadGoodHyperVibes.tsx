@@ -10,12 +10,29 @@ import governanceXNft from '../assets/images/governance-x-nft.png';
 const Container = styled.div`
   margin-top: -90px;
   padding-top: 90px;
-  padding-left: 145px;
+  padding-left: 90px;
   width: 100%;
   min-height: 100vh;
   background: url(${circlesBg}) 0 0 no-repeat;
-  background-size: 1004px auto;
-  background-position: 300px 290px;
+  background-size: 800px auto;
+  background-position: 200px 240px;
+
+  @media (min-width: 1080px) {
+    padding-left: 145px;
+  }
+
+  @media (min-width: 1260px) {
+    background-size: 904px auto;
+    background-position: 200px 210px;
+  }
+
+  @media (min-width: 1400px) {
+    background-size: 1004px auto;
+  }
+
+  @media (min-width: 1500px) {
+    background-position: 300px 290px;
+  }
 `;
 
 const InnerBackground = styled.div`
