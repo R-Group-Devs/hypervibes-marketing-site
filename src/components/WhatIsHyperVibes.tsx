@@ -12,10 +12,9 @@ import starsBg from '../assets/images/stars-bg.png';
 import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`
-  padding-top: 60px;
+  padding-top: 90px;
   padding-left: 145px;
   width: 100%;
-  height: 100vh;
   background: url(${circlesBg}) 0 0 no-repeat;
   background-size: 1004px auto;
   background-position: 300px 210px;
