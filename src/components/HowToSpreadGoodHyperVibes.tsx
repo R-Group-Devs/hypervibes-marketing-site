@@ -12,7 +12,8 @@ import starsBg from '../assets/images/stars-bg.png';
 import lathe from '../assets/images/lathe.png';
 
 const Container = styled.div`
-  padding-top: 120px;
+  margin-top: 30px;
+  padding-top: 90px;
   padding-left: 145px;
   width: 100%;
   min-height: 100vh;
@@ -89,7 +90,7 @@ const Lathe = styled.img`
 `;
 
 const HowToSpreadGoodHyperVibes = () => (
-  <Container>
+  <Container id="how-to">
     <InnerBackground>
       <HeadingContainer>
         <div>

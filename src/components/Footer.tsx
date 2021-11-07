@@ -1,13 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Nav } from './Nav';
 import raribleDaoLogo from '../assets/images/rarible-dao-logo.png';
 
 const Container = styled.footer`
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  padding-bottom: 42px;
+  padding-bottom: 60px;
   background: #090909;
 `;
 
@@ -31,7 +33,8 @@ const RaribleDaoLogo = styled.img`
 `;
 
 export const Footer = () => (
-  <Container>
+  <Container id="contact-us">
+    <Nav position="bottom" />
     <BuiltAt>
       <BuiltAtDescription>Dreamt up & built at</BuiltAtDescription>
       <RaribleDaoLogo src={raribleDaoLogo} alt="Rarible DAO" />

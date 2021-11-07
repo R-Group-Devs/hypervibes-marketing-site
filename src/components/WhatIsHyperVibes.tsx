@@ -79,7 +79,7 @@ const Lathe = styled.img`
 `;
 
 const WhatIsHyperVibes = () => (
-  <Container>
+  <Container id="what-is">
     <InnerBackground>
       <HeadingContainer>
         <div>

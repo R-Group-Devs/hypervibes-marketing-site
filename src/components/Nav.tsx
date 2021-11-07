@@ -1,14 +1,22 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Container = styled.div`
-  position: absolute;
-  padding: 32px 0;
-  left: 120px;
-  bottom: 0;
+interface Props {
+  position?: 'top' | 'bottom';
+}
+
+const Container = styled.div<{ position: Props['position'] }>`
+  position: ${({ position }) => (position === 'top' ? 'sticky' : 'absolute')};
+  top: ${({ position }) => (position === 'top' ? 0 : 'auto')};
+  bottom: ${({ position }) => (position === 'bottom' ? 0 : 'auto')};
+  left: 0;
+  margin-top: ${({ position }) => (position === 'top' ? '-72px' : 0)};
+  padding: ${({ position }) =>
+    position === 'top' ? '32px 0 100px 120px' : '32px 0 75px 120px'};
   display: flex;
   align-items: center;
-  justify-content: center;
+  background: linear-gradient(#090909 50%, transparent 100%);
+  z-index: 1;
 `;
 
 const NavItem = styled.div`
@@ -18,8 +26,8 @@ const NavItem = styled.div`
   color: #fff;
 `;
 
-export const Nav = () => (
-  <Container>
+export const Nav = ({ position = 'top' }: Props) => (
+  <Container position={position}>
     <NavItem>
       <a href="#what-is">What Is</a>
     </NavItem>

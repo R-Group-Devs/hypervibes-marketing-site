@@ -3,10 +3,6 @@
   "description": "Marketing site for the HyperVIBES project.",
   "version": "0.1.0",
   "dependencies": {
-    "@gltf-transform/core": "^1.0.1",
-    "@gltf-transform/extensions": "^1.0.1",
-    "@gltf-transform/functions": "^1.0.1",
-    "draco3dgltf": "^1.4.3",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.1.0",

@@ -41,7 +41,7 @@ const questions = [
 ];
 
 const Container = styled.div`
-  padding-top: 110px;
+  padding-top: 150px;
   padding-bottom: 200px;
   padding-left: 145px;
   width: 100%;
@@ -93,6 +93,7 @@ const Answer = styled.div<{ isExpanded: boolean }>`
   position: ${({ isExpanded }) => (isExpanded ? 'static' : 'absolute')};
   transform-origin: center left;
   transition: all 0.2s;
+  font-size: 16px;
   color: #bcff67;
 `;
 
@@ -111,7 +112,7 @@ const FAQ = () => {
   );
 
   return (
-    <Container>
+    <Container id="faq">
       <HeadingContainer>
         <div>
           <Lightbulb src={lightbulb} alt="" />
