@@ -7,7 +7,6 @@ const Container = styled.div`
   position: fixed;
   bottom: 50px;
   left: 20px;
-  column-gap: 32px;
   transform: rotate(-90deg);
   transform-origin: top left;
   opacity: 0.5;
@@ -16,6 +15,10 @@ const Container = styled.div`
 
   @media (min-width: 880px) {
     display: flex;
+  }
+
+  a {
+    margin-right: 32px;
   }
 `;
 

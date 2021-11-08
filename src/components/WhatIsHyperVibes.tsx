@@ -92,9 +92,13 @@ const Heading = styled.img`
 `;
 
 const Bullet = styled.div`
-  min-width: 300px;
   position: relative;
-  left: 0;
+  left: 15px;
+  min-width: 300px;
+
+  @media (min-width: 650px) {
+    left: 0;
+  }
 
   @media (min-width: 1080px) {
     left: -170px;
@@ -186,12 +190,12 @@ const BulletTitle = styled.div`
 `;
 
 const BulletText = styled.div`
-  margin-left: 0
+  margin-left: 0;
   width: 100%;
   font-size: 16px;
   line-height: 22px;
 
-  @media (min-width: 550px) {
+  @media (min-width: 650px) {
     margin-left: 20px;
     width: 55vw;
   }
@@ -232,7 +236,7 @@ const Image = styled.img`
   object-fit: contain;
   display: none;
 
-  @media (min-width: 550px) {
+  @media (min-width: 650px) {
     display: inline;
   }
 

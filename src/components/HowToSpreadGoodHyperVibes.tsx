@@ -18,10 +18,6 @@ const Container = styled.div`
   background-size: 800px auto;
   background-position: 200px 240px;
 
-  @media (min-width: 650px) {
-    margin-top: -90px;
-  }
-
   @media (min-width: 880px) {
     padding-left: 90px;
     padding-right: 0;
@@ -33,7 +29,7 @@ const Container = styled.div`
 
   @media (min-width: 1260px) {
     background-size: 904px auto;
-    background-position: 200px 210px;
+    background-position: 200px 260px;
   }
 
   @media (min-width: 1400px) {
@@ -91,14 +87,24 @@ const Bullets = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 0px;
+  margin-left: 40px;
   padding-bottom: 270px;
+  margin-top: 0;
+
+  @media (min-width: 650px) {
+    margin-top: 70px;
+  }
 
   @media (min-width: 1080px) {
+    margin-top: 0;
     flex-direction: row;
   }
 
   @media (min-width: 1260px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 1500px) {
     margin-left: 80px;
   }
 `;
@@ -108,20 +114,26 @@ const Bullet = styled.div`
   flex-direction: row;
   align-items: center;
   margin-top: 40px;
-  margin-right: 90px;
+  margin-right: 145px;
   margin-left: 90px;
   width: 100%;
   font-size: 16px;
   line-height: 22px;
 
-  @media (min-width: 550px) {
+  @media (min-width: 650px) {
+    margin-top: -40px;
     margin-left: 0;
   }
 
   @media (min-width: 1080px) {
     flex-direction: column;
     margin-top: 70px;
+    margin-right: 80px;
     width: auto;
+  }
+
+  @media (min-width: 1400px) {
+    margin-right: 145px;
   }
 `;
 
@@ -151,16 +163,14 @@ const Image = styled.img`
   width: 150px;
   height: 150px;
   margin-left: 20px;
+  object-fit: contain;
   display: none;
-
-  @media (min-width: 550px) {
-    display: inline;
-  }
 
   @media (min-width: 650px) {
     margin-left: 0;
     width: 220px;
     height: 280px;
+    display: inline;
   }
 
   @media (min-width: 1260px) {
@@ -198,7 +208,7 @@ const HowToSpreadGoodHyperVibes = () => (
             <BulletTitle>Social Token Distribution</BulletTitle>
             <p>
               Distribute an artist token in a way that incentivizes holding art
-              over time. This creates a network of dynamic portals that stream a
+              over time and create a network of dynamic portals that stream a
               social token to the community via NFTs.
             </p>
           </BulletText>
