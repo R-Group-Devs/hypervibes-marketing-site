@@ -11,7 +11,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'fonts',
-        path: `${__dirname}/src/fonts/`,
+        path: `${__dirname}/src/assets/fonts/`,
       },
     },
     {
@@ -19,18 +19,18 @@ module.exports = {
       options: {},
     },
     `gatsby-transformer-remark`,
-    //{
-    //resolve: `gatsby-plugin-manifest`,
-    //options: {
-    //name: `HyperVIBES`,
-    //short_name: `HyperVIBES`,
-    //start_url: `/`,
-    //background_color: `#0b0c1d`,
-    //theme_color: `#0b0c1d`,
-    //display: `minimal-ui`,
-    //icon: `src/images/favicon.png`,
-    //},
-    //},
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `HyperVIBES`,
+        short_name: `HyperVIBES`,
+        start_url: `/`,
+        background_color: `#090909`,
+        theme_color: `#090909`,
+        display: `minimal-ui`,
+        icon: `src/assets/images/favicon.png`,
+      },
+    },
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-remove-trailing-slashes`,
   ],
