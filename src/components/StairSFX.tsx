@@ -13,14 +13,14 @@ const StairOne = styled(Stair)`
   position: absolute;
   top: 50%;
   left: 30%;
-  width: 23%;
+  width: 28%;
   height: 5%;
 `;
 
 const StairTwo = styled(Stair)`
   position: absolute;
-  top: 43%;
-  left: 33%;
+  top: 42%;
+  left: 32%;
   width: 16%;
   height: 5%;
 `;
@@ -28,30 +28,30 @@ const StairTwo = styled(Stair)`
 const StairThree = styled(Stair)`
   position: absolute;
   top: 35%;
-  left: 36%;
-  width: 15%;
+  left: 34%;
+  width: 17%;
   height: 4%;
 `;
 
 const StairFour = styled(Stair)`
   position: absolute;
   top: 30%;
-  left: 39%;
-  width: 16%;
+  left: 40%;
+  width: 15%;
   height: 4%;
 `;
 
 const StairFive = styled(Stair)`
   position: absolute;
   top: 25.5%;
-  left: 46%;
+  left: 47%;
   width: 13%;
   height: 4%;
 `;
 
 const StairSix = styled(Stair)`
   position: absolute;
-  top: 21.5%;
+  top: 21%;
   left: 53%;
   width: 12%;
   height: 3.5%;
@@ -59,18 +59,18 @@ const StairSix = styled(Stair)`
 
 const StairSeven = styled(Stair)`
   position: absolute;
-  top: 16.5%;
-  left: 55%;
+  top: 16%;
+  left: 57%;
   width: 13%;
-  height: 3.5%;
+  height: 4%;
 `;
 
 const StairEight = styled(Stair)`
   position: absolute;
-  top: 11%;
-  left: 62%;
+  top: 10%;
+  left: 64%;
   width: 13%;
-  height: 4.5%;
+  height: 5.75%;
 `;
 
 export const StairSFX = ({ isSoundOn }: Props) => {
@@ -175,11 +175,11 @@ export const StairSFX = ({ isSoundOn }: Props) => {
       </audio>
 
       <audio ref={stairSevenSound} preload="auto">
-        <source src="./stair-6.mp3" type="audio/mpeg" />
+        <source src="./stair-7.mp3" type="audio/mpeg" />
       </audio>
 
       <audio ref={stairEightSound} preload="auto">
-        <source src="./stair-6.mp3" type="audio/mpeg" />
+        <source src="./stair-7.mp3" type="audio/mpeg" />
       </audio>
     </>
   );
