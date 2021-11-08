@@ -55,12 +55,20 @@ export const SEO = ({
           content: `website`,
         },
         {
+          name: `og:image`,
+          content: `https://hypervibes.xyz/social-card.png`,
+        },
+        {
           name: `twitter:card`,
           content: `summary`,
         },
         {
+          name: `twitter:image`,
+          content: `https://hypervibes.xyz/social-card.png`,
+        },
+        {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: ``,
         },
         {
           name: `twitter:title`,
