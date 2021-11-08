@@ -7,12 +7,16 @@ const Container = styled.div`
   position: fixed;
   bottom: 50px;
   left: 20px;
-  display: flex;
   column-gap: 32px;
   transform: rotate(-90deg);
   transform-origin: top left;
   opacity: 0.5;
   z-index: 2;
+  display: none;
+
+  @media (min-width: 880px) {
+    display: flex;
+  }
 `;
 
 export default () => (

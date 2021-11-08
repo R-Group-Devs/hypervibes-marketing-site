@@ -40,10 +40,21 @@ const Container = styled.div`
   margin-top: -150px;
   padding-top: 150px;
   padding-bottom: 150px;
-  padding-left: 145px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   background: #090909;
   background: linear-gradient(transparent 0%, #090909 40%);
+  overflow-x: hidden;
+
+  @media (min-width: 880px) {
+    padding-left: 90px;
+    padding-right: 0;
+  }
+
+  @media (min-width: 1080px) {
+    padding-left: 145px;
+  }
 `;
 
 const HeadingContainer = styled.div`
@@ -71,7 +82,11 @@ const Lightbulb = styled.img`
 `;
 
 const Questions = styled.div`
-  padding-left: 65px;
+  padding-left: 0;
+
+  @media (min-width: 880px) {
+    padding-left: 65px;
+  }
 `;
 
 const Item = styled.div`
@@ -83,10 +98,13 @@ const Item = styled.div`
 `;
 
 const Question = styled.div<{ isExpanded: boolean }>`
-  margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
   padding: 40px 0;
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '32px' : '40px')};
   transition: margin-left 0.2s, color 0.2s;
+
+  @media (min-width: 880px) {
+    margin-left: ${({ isExpanded }) => (isExpanded ? '105px' : 0)};
+  }
 
   &:hover {
     color: #fff;
@@ -97,13 +115,16 @@ const Question = styled.div<{ isExpanded: boolean }>`
 const Answer = styled.div<{ isExpanded: boolean }>`
   display: flex;
   align-items: center;
-  margin-left: ${({ isExpanded }) => (isExpanded ? '63px' : 0)};
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '40px' : 0)};
   transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
   transform-origin: center left;
   transition: transform 0.2s, margin-left 0.2s;
   font-size: 16px;
   color: #bcff67;
+
+  @media (min-width: 880px) {
+    margin-left: ${({ isExpanded }) => (isExpanded ? '63px' : 0)};
+  }
 `;
 
 const AnswerIcon = styled.img`
