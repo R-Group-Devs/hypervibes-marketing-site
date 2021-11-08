@@ -119,6 +119,69 @@ const SoundOnIcon = styled.img`
   display: inline-block;
 `;
 
+const Door = styled.div`
+  position: absolute;
+  top: 40%;
+  left: 52.5%;
+  width: 6%;
+  height: 12.5%;
+
+  &:hover {
+    cursor: n-resize;
+  }
+
+  @media (min-width: 1170px) {
+    top: 38%;
+  }
+
+  @media (min-width: 1260px) {
+    top: 37%;
+  }
+
+  &:after {
+    position: relative;
+    top: 40%;
+    left: -12%;
+    padding: 18px 0 0 11px;
+    content: 'Soon';
+    opacity: 0;
+    width: 45px;
+    height: 45px;
+    background: #bcff67;
+    border-radius: 50%;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #000;
+    transition: opacity 0.2s;
+    box-sizing: border-box;
+    display: none;
+
+    @media (min-width: 1000px) {
+      display: block;
+    }
+
+    @media (min-width: 1170px) {
+      top: 45%;
+      left: -12%;
+      padding: 18px 0 0 11px;
+      width: 45px;
+      height: 45px;
+    }
+
+    @media (min-width: 1260px) {
+      top: 42%;
+      left: -10%;
+      padding: 22px 0 0 14px;
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  &:hover:after {
+    opacity: 1;
+  }
+`;
+
 const SoundOffIcon = styled.img``;
 
 const IndexPage = () => {
@@ -143,6 +206,8 @@ const IndexPage = () => {
           <ArrowDown src={arrowDownIcon} alt="" />
           Scroll
         </Scroll>
+
+        <Door />
 
         <StairSFX isSoundOn={isSoundOn} />
         <BackgroundMusic isSoundOn={isSoundOn} />
