@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/whitepaper"
+  to = "https://docs.google.com/document/d/1LZp0wGyTlX9T4pgL50_KpUT_fx-_eAnAgq8mLQ9S97k/edit?usp=sharing"
+  status = 301
+  force = true
