@@ -9,7 +9,7 @@ import governanceXNft from '../assets/images/governance-x-nft.png';
 
 const Container = styled.div`
   margin-top: 0;
-  padding-top: 90px;
+  padding-top: 60px;
   padding-left: 40px;
   padding-right: 40px;
   width: 100%;
@@ -18,12 +18,17 @@ const Container = styled.div`
   background-size: 800px auto;
   background-position: 200px 240px;
 
+  @media (min-width: 650px) {
+    padding-top: 40px;
+  }
+
   @media (min-width: 880px) {
     padding-left: 90px;
     padding-right: 0;
   }
 
   @media (min-width: 1080px) {
+    padding-top: 65px;
     padding-left: 145px;
   }
 

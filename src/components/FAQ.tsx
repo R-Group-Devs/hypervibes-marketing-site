@@ -80,7 +80,7 @@ const Container = styled.div`
   overflow-x: hidden;
 
   @media (min-width: 650px) {
-    margin-top: -250px;
+    margin-top: -280px;
   }
 
   @media (min-width: 880px) {

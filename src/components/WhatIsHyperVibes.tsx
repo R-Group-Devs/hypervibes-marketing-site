@@ -61,6 +61,7 @@ const Container = styled.div`
 const InnerBackground = styled.div`
   padding-top: 60px;
   width: 100%;
+  padding-bottom: 25px;
   background: url(${starsBg}) 0 0 no-repeat;
   background-size: 1308px auto;
 `;
@@ -115,7 +116,7 @@ const Bullet = styled.div`
 
 const BulletOne = styled(Bullet)`
   display: flex;
-  margin-top: 60px;
+  margin-top: 40px;
   font-size: 16px;
   line-height: 22px;
 
