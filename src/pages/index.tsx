@@ -26,12 +26,20 @@ const StairsContainer = styled.div`
 `;
 
 const Video = styled.video`
-  padding: 0 10% 50%;
+  padding: 0 5% 50%;
   width: 100%;
   display: block;
   background: linear-gradient(#090909 60%, transparent 100%);
 
+  @media (min-width: 650px) {
+    padding: 0 10% 50%;
+  }
+
   @media (min-width: 880px) {
+    padding: 0 14% 35%;
+  }
+
+  @media (min-width: 1170px) {
     padding: 0 19% 35%;
   }
 `;
