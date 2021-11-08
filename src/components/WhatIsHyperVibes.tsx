@@ -3,9 +3,9 @@ import heading from '../assets/images/headings/what-is-hypervibes.svg';
 import eye from '../assets/images/eye.png';
 import circlesBg from '../assets/images/circles-bg.png';
 import starsBg from '../assets/images/stars-bg.png';
-import lathe from '../assets/images/lathe.png';
-import lathe2 from '../assets/images/lathe-2.png';
-import weirdoWire from '../assets/images/weirdo-wire.png';
+import provenanceMining from '../assets/images/provenance-mining.png';
+import multiTenanted from '../assets/images/multi-tenanted.png';
+import publicTrustless from '../assets/images/public-trustless.png';
 
 const Container = styled.div`
   position: relative;
@@ -101,7 +101,7 @@ const Bullet = styled.div`
   }
 
   @media (min-width: 1260px) {
-    left: -100px;
+    left: -30px;
   }
 
   @media (min-width: 1500px) {
@@ -111,121 +111,137 @@ const Bullet = styled.div`
 
 const BulletOne = styled(Bullet)`
   display: flex;
-  margin-top: 90px;
+  margin-top: 60px;
   font-size: 16px;
   line-height: 22px;
 
   @media (min-width: 650px) {
-    margin-top: 130px;
+    margin-top: 70px;
   }
 
   @media (min-width: 1080px) {
-    margin-left: 145px;
+    margin-left: 165px;
+  }
+
+  @media (min-width: 1260px) {
+    margin-left: 45px;
   }
 `;
 
 const BulletTwo = styled(Bullet)`
   display: flex;
+  flex-direction: row;
   margin-top: 60px;
   font-size: 16px;
   line-height: 22px;
 
   @media (min-width: 1080px) {
-    margin-top: -100px;
-    margin-left: 760px;
+    margin-top: -300px;
+    margin-left: 740px;
+    flex-direction: column;
   }
 
   @media (min-width: 1260px) {
-    margin-top: 23px;
-    margin-left: 860px;
+    margin-top: -300px;
+    margin-left: 740px;
   }
 
   @media (min-width: 1400px) {
-    margin-top: 43px;
+    margin-top: -300px;
     margin-left: 940px;
   }
 `;
 
 const BulletThree = styled(Bullet)`
   display: flex;
-  margin-top: 60px;
+  flex-direction: row-reverse;
+  justify-content: start;
   padding-bottom: 110px;
   font-size: 16px;
   line-height: 22px;
   text-align: left;
 
-  @media (min-width: 550px) {
+  @media (min-width: 1080px) {
+    margin-top: 20px;
+    margin-left: 305px;
     text-align: right;
+    flex-direction: row;
   }
 
-  @media (min-width: 1080px) {
+  @media (min-width: 1260px) {
     margin-top: 0;
     margin-left: 245px;
   }
 
-  @media (min-width: 1260px) {
-    margin-top: 27px;
-    margin-left: 145px;
-  }
-
   @media (min-width: 1400px) {
-    margin-top: 77px;
-    margin-left: 245px;
+    margin-top: -34px;
+    margin-left: 385px;
   }
 `;
 
+const BulletTitle = styled.div`
+  font-family: '3616 Grammastile', sans-serif;
+  font-size: 8px;
+  color: #17ffe3;
+`;
+
 const BulletText = styled.div`
+  margin-left: 0
   width: 100%;
   font-size: 16px;
   line-height: 22px;
 
   @media (min-width: 550px) {
-    width: 50vw;
+    margin-left: 20px;
+    width: 55vw;
+  }
+
+  @media (min-width: 650px) {
+    margin-left: 40px;
   }
 
   @media (min-width: 1080px) {
-    width: 200px;
-  }
-
-  @media (min-width: 1260px) {
+    margin-left: 0;
     width: 277px;
   }
 `;
 
-const Lathe = styled.img`
+const BulletOneText = styled(BulletText)`
   position: relative;
-  top: -30px;
-  width: 133px;
+  top: 30px;
+
+  @media (min-width: 1080px) {
+    top: 70px;
+  }
+`;
+
+const BulletThreeText = styled(BulletText)`
+  position: relative;
+  top: 30px;
+
+  @media (min-width: 1080px) {
+    top: 62px;
+  }
+`;
+
+const Image = styled.img`
+  position: relative;
+  top: 0;
+  width: 180px;
   height: auto;
+  object-fit: contain;
   display: none;
 
   @media (min-width: 550px) {
     display: inline;
   }
-`;
 
-const Lathe2 = styled.img`
-  position: relative;
-  top: -50px;
-  left: -20px;
-  width: 66px;
-  height: 69px;
-  display: none;
-
-  @media (min-width: 550px) {
-    display: inline;
+  @media (min-width: 1080px) {
+    top: -30px;
   }
-`;
 
-const WeirdoWire = styled.img`
-  position: relative;
-  top: -80px;
-  width: 215px;
-  height: auto;
-  display: none;
-
-  @media (min-width: 550px) {
-    display: inline;
+  @media (min-width: 1260px) {
+    width: 240px;
   }
 `;
 
@@ -240,39 +256,37 @@ const WhatIsHyperVibes = () => (
       </HeadingContainer>
 
       <BulletOne>
-        <Lathe src={lathe} alt="" />
-        <BulletText>
-          <strong>Provenance Mining Protocol</strong>
+        <Image src={provenanceMining} alt="" />
+        <BulletOneText>
+          <BulletTitle>Provenance Mining Protocol</BulletTitle>
           <p>
             Infuse any ERC-20 tokens inside of any ERC-721 NFT. Infused tokens
-            can be mined and claimed by the NFT owner, while unclaimed tokens
-            stay inside the NFT across sales or transfers.
+            can be mined and claimed by the NFT owner.
           </p>
-        </BulletText>
+        </BulletOneText>
       </BulletOne>
 
       <BulletTwo>
-        <Lathe2 src={lathe2} alt="" />
+        <Image src={multiTenanted} alt="" />
         <BulletText>
-          <strong>Multi-Tenanted</strong>
+          <BulletTitle>Multi-Tenanted</BulletTitle>
           <p>
             Create a fully isolated and independently configured HyperVIBES
             realm to run your own experiments without having to deploy a
-            contract. Use any token or ruleset you want.
+            contract.
           </p>
         </BulletText>
       </BulletTwo>
 
       <BulletThree>
-        <BulletText>
-          <strong>Public and Trustless</strong>
+        <BulletThreeText>
+          <BulletTitle>Public + Trustless</BulletTitle>
           <p>
-            HyperVIBES is free for everyone to use and extracts no fees. Rarible
-            DAO does not retain any upgrade capabilities or privileged roles
-            within the protocol.
+            Free for everyone to use and extracts no fees. Rarible DAO does not
+            retain any upgrade capabilities or privileged roles.
           </p>
-        </BulletText>
-        <WeirdoWire src={weirdoWire} alt="" />
+        </BulletThreeText>
+        <Image src={publicTrustless} alt="" />
       </BulletThree>
     </InnerBackground>
   </Container>
