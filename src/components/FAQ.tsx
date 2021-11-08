@@ -9,7 +9,7 @@ const questions = [
   {
     question: 'What is provenance mining?',
     answer:
-      'Provenance Mining is a mechanism that allows an NFT to mine tokens over time that the owner of the NFT can claim. Unclaimed tokens stay within the NFT across sales or transfers.',
+      'Provenance mining is a mechanism that allows an NFT to mine tokens over time that the owner of the NFT can claim. Unclaimed tokens stay within the NFT across sales or transfers.',
   },
   {
     question: 'What is a realm?',
@@ -20,8 +20,8 @@ const questions = [
     question: 'How do I create a realm?',
     answer: (
       <>
-        The <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a> can be used
-        to create, view, and manage realms. You can also programmatically create
+        The <strong>HyperVIBES dApp</strong> (coming soon) can be used to
+        create, view, and manage realms. You can also programmatically create
         realms directly from the smart contract by invoking the{' '}
         <strong>createRealm</strong> function.
       </>
@@ -33,8 +33,8 @@ const questions = [
       <>
         You can use HyperVIBES with any ERC-721 and ERC-20 tokens without having
         to write any code or deploy a contract by using the{' '}
-        <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a> to manage
-        realms, infuse NFTs, and claim tokens.
+        <strong>HyperVIBES dApp</strong> (coming soon) to manage realms, infuse
+        NFTs, and claim tokens.
         <br />
         <br />
         More direct integrations can be built by directly invoking the
