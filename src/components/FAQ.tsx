@@ -57,6 +57,7 @@ const Heading = styled.img``;
 const FaqTile = styled.div`
   margin-left: 22px;
   background: url(${faqTile}) 0 0 repeat-x;
+  background-size: 198px 42px;
   width: 100%;
   height: 60px;
 `;
