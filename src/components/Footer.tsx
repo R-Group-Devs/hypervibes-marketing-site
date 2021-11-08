@@ -33,7 +33,6 @@ const RaribleDaoLogo = styled.img`
 
 export const Footer = () => (
   <Container id="contribute">
-    <Nav position="bottom" />
     <BuiltAt>
       <BuiltAtDescription>Dreamt up & built at</BuiltAtDescription>
 
