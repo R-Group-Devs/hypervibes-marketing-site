@@ -239,7 +239,8 @@ const WhatIsHyperVibes = () => (
           <strong>Provenance Mining Protocol</strong>
           <p>
             Infuse any ERC-20 tokens inside of any ERC-721 NFT. Infused tokens
-            can be mined and claimed by the NFT owner.
+            can be mined and claimed by the NFT owner, while unclaimed tokens
+            stay inside the NFT across sales or transfers.
           </p>
         </BulletText>
       </BulletOne>
@@ -251,7 +252,7 @@ const WhatIsHyperVibes = () => (
           <p>
             Create a fully isolated and independently configured HyperVIBES
             realm to run your own experiments without having to deploy a
-            contract.
+            contract. Use any token or ruleset you want.
           </p>
         </BulletText>
       </BulletTwo>

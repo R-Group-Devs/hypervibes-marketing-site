@@ -8,15 +8,39 @@ import faqTile from '../assets/images/faq-tile.svg';
 const questions = [
   {
     question: 'What is provenance mining?',
-    answer: 'This is an an example of an answer.',
+    answer:
+      'Provenance Mining is a mechanism that allows an NFT to mine tokens over time that the owner of the NFT can claim. Unclaimed tokens stay within the NFT across sales or transfers.',
+  },
+  {
+    question: 'What is a realm?',
+    answer:
+      'A HyperVIBES realm is an isolated environment with a specific ERC-20 token and various configuration options. Anybody is free to create a realm for their own experiments, protocols, and projects.',
   },
   {
     question: 'How do I create a realm?',
-    answer: 'This is an an example of an answer.',
+    answer: (
+      <>
+        The <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a> can be used
+        to create, view, and manage realms. You can also programmatically create
+        realms directly from the smart contract by invoking the{' '}
+        <strong>createRealm</strong> function.
+      </>
+    ),
   },
   {
     question: 'How do I integrate HyperVIBES into my protocol?',
-    answer: 'This is an an example of an answer.',
+    answer: (
+      <>
+        You can use HyperVIBES with any ERC-721 and ERC-20 tokens without having
+        to write any code or deploy a contract by using the{' '}
+        <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a> to manage
+        realms, infuse NFTs, and claim tokens.
+        <br />
+        <br />
+        More direct integrations can be built by directly invoking the
+        HyperVIBES smart contract from your protocol.
+      </>
+    ),
   },
   {
     question: 'How can I infuse an NFT?',
@@ -28,11 +52,19 @@ const questions = [
   },
   {
     question: 'What does it cost to use HyperVIBES?',
-    answer: 'This is an an example of an answer.',
+    answer:
+      'HyperVIBES will always be 100% free to use, with zero fees, forever.',
   },
   {
     question: 'Is there a protocol or governance token?',
-    answer: 'This is an an example of an answer.',
+    answer: (
+      <>
+        No, there is no upgradeable functionality nor fee extraction. There is
+        nothing to govern on the protocol itself.
+        <br />
+        <br /> Peripheral communities may chose to launch a DAO / token.
+      </>
+    ),
   },
 ];
 
@@ -148,20 +180,28 @@ const Question = styled.div<{ isExpanded: boolean }>`
 
 const Answer = styled.div<{ isExpanded: boolean }>`
   display: flex;
-  align-items: center;
+  align-items: start;
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '40px' : 0)};
+  padding-right: 40px;
   transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
   transform-origin: center left;
   transition: transform 0.2s, margin-left 0.2s;
   font-size: 16px;
+  line-height: 22px;
   color: #bcff67;
 
   @media (min-width: 880px) {
     margin-left: ${({ isExpanded }) => (isExpanded ? '63px' : 0)};
   }
+
+  a:hover {
+    text-decoration: underline;
+    border-bottom: 0;
+  }
 `;
 
 const AnswerIcon = styled.img`
+  margin-top: 5px;
   margin-right: 32px;
 `;
 
