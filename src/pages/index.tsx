@@ -8,6 +8,7 @@ import FAQ from '../components/FAQ';
 import { StairSFX } from '../components/StairSFX';
 import { BackgroundMusic } from '../components/BackgroundMusic';
 import arrowDownIcon from '../assets/images/icons/arrow-down.svg';
+import soundOnIcon from '../assets/images/icons/sound-on.svg';
 import soundOffIcon from '../assets/images/icons/sound-off.svg';
 
 const StairsContainer = styled.div`
@@ -94,6 +95,7 @@ const SoundToggle = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  user-select: none;
   z-index: 1;
 
   &:hover {
@@ -107,6 +109,13 @@ const SoundToggleText = styled.div`
   font-size: 6px;
   color: #fff;
 `;
+
+const SoundOnIcon = styled.img`
+  margin-left: 2px;
+  display: inline-block;
+`;
+
+const SoundOffIcon = styled.img``;
 
 const IndexPage = () => {
   const [isSoundOn, setIsSoundOn] = useState(false);
@@ -142,7 +151,11 @@ const IndexPage = () => {
       </Layout>
 
       <SoundToggle onClick={() => setIsSoundOn(!isSoundOn)}>
-        <img src={soundOffIcon} alt="" />
+        {isSoundOn ? (
+          <SoundOnIcon src={soundOnIcon} alt="" />
+        ) : (
+          <SoundOffIcon src={soundOffIcon} alt="" />
+        )}
         <SoundToggleText>
           {isSoundOn ? 'Sound On' : 'Sound Off'}
         </SoundToggleText>
