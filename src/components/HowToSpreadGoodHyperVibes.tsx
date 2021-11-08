@@ -43,6 +43,12 @@ const Container = styled.div`
   @media (min-width: 1500px) {
     background-position: 300px 290px;
   }
+
+  @media (min-width: 1800px) {
+    padding-left: 14%;
+    background-position: 45% 250px;
+    background-size: 1200px auto;
+  }
 `;
 
 const InnerBackground = styled.div`
