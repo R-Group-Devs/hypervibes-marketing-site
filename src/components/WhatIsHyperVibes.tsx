@@ -38,16 +38,17 @@ const Container = styled.div`
   }
 
   @media (min-width: 1260px) {
-    top: -400px;
     background-size: 904px auto;
     background-position: 200px 210px;
   }
 
   @media (min-width: 1400px) {
+    top: -300px;
     background-size: 1004px auto;
   }
 
   @media (min-width: 1500px) {
+    top: -400px;
     background-position: 300px 210px;
   }
 

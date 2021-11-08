@@ -45,20 +45,27 @@ const Video = styled.video`
 
 const Description = styled.div`
   position: absolute;
-  bottom: 45%;
   left: 120px;
   width: 228px;
-  font-size: 12px;
-  line-height: 18px;
+  font-size: 14px;
+  line-height: 20px;
   font-weight: 300;
   color: #fff;
   display: none;
 
   @media (min-width: 1170px) {
+    bottom: 18vw;
+    width: 228px;
     display: block;
   }
 
+  @media (min-width: 1260px) {
+    bottom: 14vw;
+    width: 308px;
+  }
+
   @media (min-width: 1400px) {
+    bottom: 7vw;
     width: 308px;
     font-size: 16px;
     line-height: 22px;
@@ -202,13 +209,6 @@ const IndexPage = () => {
           <source src="./stairway.webm" type="video/webm" />
         </Video>
 
-        <Description>
-          <strong>Be the NFT Alchemist&mdash;</strong>
-          <br />
-          The possibilities are endless in the realms of your imagination. What
-          would you do with that power?
-        </Description>
-
         <Scroll>
           <ArrowDown src={arrowDownIcon} alt="" />
           Scroll
@@ -218,6 +218,13 @@ const IndexPage = () => {
 
         <BackgroundMusic isSoundOn={isSoundOn} />
       </StairsContainer>
+
+      <Description>
+        <strong>Be the NFT Alchemist&mdash;</strong>
+        <br />
+        The possibilities are endless in the realms of your imagination. What
+        would you do with that power?
+      </Description>
 
       <Layout>
         <WhatIsHyperVibes />
