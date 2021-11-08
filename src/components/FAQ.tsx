@@ -9,7 +9,7 @@ const questions = [
   {
     question: 'What is provenance mining?',
     answer:
-      'Provenance mining is a mechanism that allows an NFT to mine tokens over time that the owner of the NFT can claim. Unclaimed tokens stay within the NFT across sales or transfers.',
+      'Provenance mining is a mechanism that allows an NFT to mine tokens over time which the owner of the NFT can claim. Unclaimed tokens stay within the NFT across sales or transfers.',
   },
   {
     question: 'What is a realm?',
@@ -31,7 +31,7 @@ const questions = [
     question: 'How do I integrate HyperVIBES into my protocol?',
     answer: (
       <>
-        You can use HyperVIBES with any ERC-721 and ERC-20 tokens without having
+        You can use HyperVIBES with any ERC-721 and ERC-20 token without having
         to write any code or deploy a contract by using the{' '}
         <strong>HyperVIBES dApp</strong> (coming soon) to manage realms, infuse
         NFTs, and claim tokens.
@@ -62,7 +62,7 @@ const questions = [
         No, there is no upgradeable functionality nor fee extraction. There is
         nothing to govern on the protocol itself.
         <br />
-        <br /> Peripheral communities may chose to launch a DAO / token.
+        <br /> Peripheral communities may choose to launch a DAO / token.
       </>
     ),
   },
