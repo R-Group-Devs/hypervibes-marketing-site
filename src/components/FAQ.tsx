@@ -183,6 +183,7 @@ const Answer = styled.div<{ isExpanded: boolean }>`
   align-items: start;
   padding-bottom: ${({ isExpanded }) => (isExpanded ? '40px' : 0)};
   padding-right: 40px;
+  max-width: 780px;
   transform: ${({ isExpanded }) => (isExpanded ? 'scaleX(1)' : 'scaleX(0)')};
   transform-origin: center left;
   transition: transform 0.2s, margin-left 0.2s;
