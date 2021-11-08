@@ -91,7 +91,7 @@ const SoundToggle = styled.div`
   bottom: 32px;
   right: 32px;
   width: 95px;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -100,6 +100,10 @@ const SoundToggle = styled.div`
 
   &:hover {
     cursor: pointer;
+  }
+
+  @media (min-width: 880px) {
+    display: flex;
   }
 `;
 

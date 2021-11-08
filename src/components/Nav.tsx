@@ -10,7 +10,7 @@ const Container = styled.div<{ position: Props['position'] }>`
   bottom: ${({ position }) => (position === 'bottom' ? 0 : 'auto')};
   left: 0;
   padding: ${({ position }) =>
-    position === 'top' ? '32px 0 100px 90px' : '32px 0 75px 90px'};
+    position === 'top' ? '32px 0 100px 40px' : '32px 0 75px 40px'};
   width: ${({ position }) => (position === 'top' ? '100%' : 'auto')};
   align-items: center;
   background: ${({ position }) =>
@@ -20,11 +20,16 @@ const Container = styled.div<{ position: Props['position'] }>`
   z-index: 1;
   display: none;
 
+  @media (min-width: 768px) {
+    display: ${({ position }) => (position === 'top' ? 'flex' : 'none')};
+  }
+
   @media (min-width: 1080px) {
     padding-left: 120px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 1170px) {
+    padding-left: 120px;
     display: flex;
   }
 `;

@@ -9,14 +9,29 @@ import weirdoWire from '../assets/images/weirdo-wire.png';
 
 const Container = styled.div`
   position: relative;
-  top: -300px;
+  top: -250px;
   margin-bottom: -400px;
   padding-top: 90px;
-  padding-left: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   background: url(${circlesBg}) 0 0 no-repeat;
   background-size: 800px auto;
   background-position: 200px 240px;
+
+  @media (min-width: 500px) {
+    top: -300px;
+  }
+
+  @media (min-width: 650px) {
+    top: -350px;
+  }
+
+  @media (min-width: 880px) {
+    top: -300px;
+    padding-left: 90px;
+    padding-right: 0;
+  }
 
   @media (min-width: 1080px) {
     padding-left: 145px;
@@ -51,7 +66,7 @@ const HeadingContainer = styled.div`
 
 const Eye = styled.img`
   margin: 5px 16px 0 0;
-  width: 30px;
+  width: 38px;
 
   @media (min-width: 650px) {
     width: 47px;
@@ -90,9 +105,13 @@ const Bullet = styled.div`
 
 const BulletOne = styled(Bullet)`
   display: flex;
-  margin-top: 130px;
+  margin-top: 90px;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: 650px) {
+    margin-top: 130px;
+  }
 
   @media (min-width: 1080px) {
     margin-left: 145px;
@@ -127,7 +146,11 @@ const BulletThree = styled(Bullet)`
   padding-bottom: 110px;
   font-size: 16px;
   line-height: 22px;
-  text-align: right;
+  text-align: left;
+
+  @media (min-width: 550px) {
+    text-align: right;
+  }
 
   @media (min-width: 1080px) {
     margin-top: 0;
@@ -146,9 +169,13 @@ const BulletThree = styled(Bullet)`
 `;
 
 const BulletText = styled.div`
-  width: 50vw;
+  width: 100%;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: 550px) {
+    width: 50vw;
+  }
 
   @media (min-width: 1080px) {
     width: 200px;
@@ -164,6 +191,11 @@ const Lathe = styled.img`
   top: -30px;
   width: 133px;
   height: auto;
+  display: none;
+
+  @media (min-width: 550px) {
+    display: inline;
+  }
 `;
 
 const Lathe2 = styled.img`
@@ -172,6 +204,11 @@ const Lathe2 = styled.img`
   left: -20px;
   width: 66px;
   height: 69px;
+  display: none;
+
+  @media (min-width: 550px) {
+    display: inline;
+  }
 `;
 
 const WeirdoWire = styled.img`
@@ -179,6 +216,11 @@ const WeirdoWire = styled.img`
   top: -80px;
   width: 215px;
   height: auto;
+  display: none;
+
+  @media (min-width: 550px) {
+    display: inline;
+  }
 `;
 
 const WhatIsHyperVibes = () => (

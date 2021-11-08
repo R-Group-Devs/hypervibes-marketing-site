@@ -8,14 +8,24 @@ import tokenDistribution from '../assets/images/token-distribution.png';
 import governanceXNft from '../assets/images/governance-x-nft.png';
 
 const Container = styled.div`
-  margin-top: -90px;
+  margin-top: 0;
   padding-top: 90px;
-  padding-left: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
   width: 100%;
   min-height: 100vh;
   background: url(${circlesBg}) 0 0 no-repeat;
   background-size: 800px auto;
   background-position: 200px 240px;
+
+  @media (min-width: 650px) {
+    margin-top: -90px;
+  }
+
+  @media (min-width: 880px) {
+    padding-left: 90px;
+    padding-right: 0;
+  }
 
   @media (min-width: 1080px) {
     padding-left: 145px;
@@ -50,44 +60,77 @@ const HeadingContainer = styled.div`
 
 const Glacier = styled.img`
   margin: -15px 30px 0 0;
-  width: 50px;
+  width: 42px;
+
+  @media (min-width: 650px) {
+    width: 50px;
+  }
 `;
 
-const Heading = styled.img``;
+const Heading = styled.img`
+  margin-bottom: 30px;
+  width: 248px;
+
+  @media (min-width: 650px) {
+    margin-bottom: 0;
+    width: 347px;
+  }
+
+  @media (min-width: 880px) {
+    width: auto;
+  }
+`;
 
 const Bullets = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin-left: 80px;
+  margin-left: 0px;
   padding-bottom: 270px;
+
+  @media (min-width: 1080px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1260px) {
+    margin-left: 80px;
+  }
 `;
 
-const BulletOne = styled.div`
-  margin-top: 70px;
-  font-size: 16px;
-  line-height: 22px;
+const Bullet = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
   margin-right: 90px;
-`;
-
-const BulletTwo = styled.div`
-  margin-top: 70px;
-  width: 277px;
+  margin-left: 90px;
+  width: 100%;
   font-size: 16px;
   line-height: 22px;
-  margin-right: 90px;
-`;
 
-const BulletThree = styled.div`
-  margin-top: 70px;
-  width: 277px;
-  font-size: 16px;
-  line-height: 22px;
+  @media (min-width: 550px) {
+    margin-left: 0;
+  }
+
+  @media (min-width: 1080px) {
+    flex-direction: column;
+    margin-top: 70px;
+    width: auto;
+  }
 `;
 
 const BulletText = styled.div`
-  width: 277px;
+  width: auto;
   font-size: 16px;
   line-height: 22px;
+
+  @media (min-width: 1080px) {
+    width: 225px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 277px;
+  }
 `;
 
 const BulletTitle = styled.div`
@@ -99,8 +142,25 @@ const BulletTitle = styled.div`
 const Image = styled.img`
   position: relative;
   top: 10px;
-  width: 280px;
-  height: auto;
+  width: 150px;
+  height: 150px;
+  margin-left: 20px;
+  display: none;
+
+  @media (min-width: 550px) {
+    display: inline;
+  }
+
+  @media (min-width: 650px) {
+    margin-left: 0;
+    width: 220px;
+    height: 280px;
+  }
+
+  @media (min-width: 1260px) {
+    width: 280px;
+    height: 280px;
+  }
 `;
 
 const HowToSpreadGoodHyperVibes = () => (
@@ -114,7 +174,7 @@ const HowToSpreadGoodHyperVibes = () => (
       </HeadingContainer>
 
       <Bullets>
-        <BulletOne>
+        <Bullet>
           <Image src={decentralizedCuration} alt="" />
           <BulletText>
             <BulletTitle>Decentralized Art Curation</BulletTitle>
@@ -124,9 +184,9 @@ const HowToSpreadGoodHyperVibes = () => (
               sell art with the ability to influence the network.
             </p>
           </BulletText>
-        </BulletOne>
+        </Bullet>
 
-        <BulletTwo>
+        <Bullet>
           <Image src={tokenDistribution} alt="" />
           <BulletText>
             <BulletTitle>Social Token Distribution</BulletTitle>
@@ -136,9 +196,9 @@ const HowToSpreadGoodHyperVibes = () => (
               social token to the community via NFTs.
             </p>
           </BulletText>
-        </BulletTwo>
+        </Bullet>
 
-        <BulletThree>
+        <Bullet>
           <Image src={governanceXNft} alt="" />
           <BulletText>
             <BulletTitle>Collectible and Gaming Projects</BulletTitle>
@@ -148,7 +208,7 @@ const HowToSpreadGoodHyperVibes = () => (
               mint with a community governance token.
             </p>
           </BulletText>
-        </BulletThree>
+        </Bullet>
       </Bullets>
     </InnerBackground>
   </Container>

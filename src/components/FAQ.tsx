@@ -37,33 +37,53 @@ const questions = [
 ];
 
 const Container = styled.div`
-  margin-top: -150px;
+  margin-top: -290px;
   padding-top: 150px;
-  padding-bottom: 150px;
-  padding-left: 40px;
   padding-right: 40px;
+  padding-bottom: 100px;
+  padding-left: 40px;
   width: 100%;
   background: #090909;
   background: linear-gradient(transparent 0%, #090909 40%);
   overflow-x: hidden;
 
+  @media (min-width: 650px) {
+    margin-top: -250px;
+  }
+
   @media (min-width: 880px) {
     padding-left: 90px;
     padding-right: 0;
+    padding-bottom: 150px;
   }
 
   @media (min-width: 1080px) {
     padding-left: 145px;
+    margin-top: -150px;
   }
 `;
 
 const HeadingContainer = styled.div`
   display: flex;
   align-items: start;
-  margin-bottom: 35px;
+  margin-bottom: 0;
+
+  @media (min-width: 650px) {
+    margin-bottom: 35px;
+  }
 `;
 
-const Heading = styled.img``;
+const Heading = styled.img`
+  width: 642px;
+
+  @media (min-width: 650px) {
+    width: 890px;
+  }
+
+  @media (min-width: 880px) {
+    width: auto;
+  }
+`;
 
 const FaqTile = styled.div`
   margin-left: 22px;
@@ -75,10 +95,20 @@ const FaqTile = styled.div`
 
 const Lightbulb = styled.img`
   position: relative;
-  top: -15px;
   margin-right: 32px;
-  width: 35px;
+  top: -5px;
+  width: 20px;
   height: auto;
+
+  @media (min-width: 650px) {
+    top: -8px;
+    width: 25px;
+  }
+
+  @media (min-width: 880px) {
+    top: -15px;
+    width: 35px;
+  }
 `;
 
 const Questions = styled.div`
@@ -90,11 +120,15 @@ const Questions = styled.div`
 `;
 
 const Item = styled.div`
-  font-size: 20px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
   border-bottom: 1px solid #17ffe3;
   transition: color 0.2s;
   overflow: hidden;
+
+  @media (min-width: 650px) {
+    font-size: 20px;
+  }
 `;
 
 const Question = styled.div<{ isExpanded: boolean }>`
