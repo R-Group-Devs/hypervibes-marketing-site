@@ -53,7 +53,7 @@ const Description = styled.div`
   color: #fff;
   display: none;
 
-  @media (min-width: 1170px) {
+  @media (min-width: 1170px) and (min-height: 600px) {
     bottom: 18vw;
     width: 228px;
     display: block;
@@ -61,7 +61,7 @@ const Description = styled.div`
 
   @media (min-width: 1260px) {
     bottom: 14vw;
-    width: 308px;
+    width: 288px;
   }
 
   @media (min-width: 1400px) {
