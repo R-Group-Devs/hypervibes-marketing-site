@@ -73,7 +73,7 @@ const Description = styled.div`
   }
 
   @media (max-width: 2080px) and (min-height: 1235px) {
-    bottom: 20vw;
+    bottom: 40vw;
   }
 `;
 
