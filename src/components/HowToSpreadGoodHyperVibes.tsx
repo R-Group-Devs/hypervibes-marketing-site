@@ -159,6 +159,7 @@ const BulletText = styled.div`
 const BulletTitle = styled.div`
   font-family: '3616 Grammastile', sans-serif;
   font-size: 8px;
+  line-height: 16px;
   color: #17ffe3;
 `;
 
