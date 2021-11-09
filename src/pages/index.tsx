@@ -5,6 +5,7 @@ import { SEO } from '../components/SEO';
 import WhatIsHyperVibes from '../components/WhatIsHyperVibes';
 import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 import FAQ from '../components/FAQ';
+import { StairSFX } from '../components/StairSFX';
 import { BackgroundMusic } from '../components/BackgroundMusic';
 import arrowDownIcon from '../assets/images/icons/arrow-down.svg';
 import soundOnIcon from '../assets/images/icons/sound-on.svg';
@@ -220,6 +221,7 @@ const IndexPage = () => {
 
         <Door />
 
+        <StairSFX isSoundOn={isSoundOn} />
         <BackgroundMusic isSoundOn={isSoundOn} />
       </StairsContainer>
 
