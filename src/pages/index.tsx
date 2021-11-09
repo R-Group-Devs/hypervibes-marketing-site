@@ -54,26 +54,20 @@ const Description = styled.div`
   color: #fff;
   display: none;
 
-  @media (min-width: 1170px) and (min-height: 600px) {
-    bottom: 18vw;
+  @media (min-width: 1170px) {
+    top: 37vw;
     width: 228px;
     display: block;
   }
 
   @media (min-width: 1260px) {
-    bottom: 14vw;
-    width: 288px;
+    width: 258px;
   }
 
   @media (min-width: 1400px) {
-    bottom: 7vw;
-    width: 308px;
+    width: 300px;
     font-size: 16px;
     line-height: 22px;
-  }
-
-  @media (max-width: 2080px) and (min-height: 1235px) {
-    bottom: 40vw;
   }
 `;
 
@@ -223,14 +217,14 @@ const IndexPage = () => {
 
         <StairSFX isSoundOn={isSoundOn} />
         <BackgroundMusic isSoundOn={isSoundOn} />
-      </StairsContainer>
 
-      <Description>
-        <strong>Be the NFT Alchemist&mdash;</strong>
-        <br />
-        The possibilities are endless in the realms of your imagination. What
-        would you do with that power?
-      </Description>
+        <Description>
+          <strong>Be the NFT Alchemist&mdash;</strong>
+          <br />
+          The possibilities are endless in the realms of your imagination. What
+          would you do with that power?
+        </Description>
+      </StairsContainer>
 
       <Layout>
         <WhatIsHyperVibes />
