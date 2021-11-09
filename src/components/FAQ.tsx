@@ -44,11 +44,25 @@ const questions = [
   },
   {
     question: 'How can I infuse an NFT?',
-    answer: 'This is an an example of an answer.',
+    answer: (
+      <>
+        You can view all realms that you are allowed to infuse within the{' '}
+        <strong>HyperVIBES dApp</strong> (coming soon). After selecting a
+        specific realm, you can then choose to infuse NFTs based on the
+        constraints and realm configuration.
+      </>
+    ),
   },
   {
     question: 'How do I claim infused tokens?',
-    answer: 'This is an an example of an answer.',
+    answer: (
+      <>
+        You can view all realms that you can claim tokens from in the{' '}
+        <strong>HyperVIBES dApp</strong> (coming soon). After selecting a
+        specific realm, you can then browse the NFTs you own with claimable
+        tokens.
+      </>
+    ),
   },
   {
     question: 'What does it cost to use HyperVIBES?',
