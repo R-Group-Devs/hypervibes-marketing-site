@@ -70,6 +70,10 @@ const Description = styled.div`
     font-size: 16px;
     line-height: 22px;
   }
+
+  @media (max-width: 2080px) and (min-height: 1235px) {
+    bottom: 20vw;
+  }
 `;
 
 const Scroll = styled.div`
