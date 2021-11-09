@@ -275,7 +275,7 @@ const WhatIsHyperVibes = () => (
       <BulletTwo>
         <Image src={multiTenanted} alt="" />
         <BulletText>
-          <BulletTitle>Multi-Tenanted</BulletTitle>
+          <BulletTitle>Infinite Realms</BulletTitle>
           <p>
             Create a fully isolated and independently configured HyperVIBES
             realm to run your own experiments without having to deploy a

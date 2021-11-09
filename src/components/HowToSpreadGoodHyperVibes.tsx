@@ -222,7 +222,7 @@ const HowToSpreadGoodHyperVibes = () => (
         <Bullet>
           <Image src={governanceXNft} alt="" />
           <BulletText>
-            <BulletTitle>Collectible and Gaming Projects</BulletTitle>
+            <BulletTitle>Collectibles and Gaming</BulletTitle>
             <p>
               Infuse NFTs with in-game resource tokens that can be claimed by
               the owner. Release a collectible project that infuses every NFT on
