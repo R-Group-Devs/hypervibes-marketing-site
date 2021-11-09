@@ -264,10 +264,14 @@ const WhatIsHyperVibes = () => (
       <BulletOne>
         <Image src={provenanceMining} alt="" />
         <BulletOneText>
-          <BulletTitle>Provenance Mining Protocol</BulletTitle>
+          <BulletTitle>Provenance Mining</BulletTitle>
           <p>
-            Infuse any ERC-20 tokens inside of any ERC-721 NFT. Infused tokens
-            can be mined and claimed by the NFT owner.
+            Infuse any ERC-20 token inside of any ERC-721 NFT. Infused tokens
+            can be claimed by the NFT holder after being mined by the NFT over
+            time.
+          </p>
+          <p>
+            You now have tradeable, ownable, token streaming portals.
           </p>
         </BulletOneText>
       </BulletOne>
@@ -281,6 +285,10 @@ const WhatIsHyperVibes = () => (
             realm to run your own experiments without having to deploy a
             contract.
           </p>
+          <p>
+            Use any token or ruleset you want. There are no
+            gatekeepers here.
+          </p>
         </BulletText>
       </BulletTwo>
 
@@ -288,8 +296,13 @@ const WhatIsHyperVibes = () => (
         <BulletThreeText>
           <BulletTitle>Public + Trustless</BulletTitle>
           <p>
-            Free for everyone to use and extracts no fees. Rarible DAO does not
-            retain any upgrade capabilities or privileged roles.
+            HyperVIBES is free for everyone to use forever. Rarible DAO does not
+            retain any upgrade capabilities nor privileged roles within the
+            protocol.
+          </p>
+          <p>
+            Your realms will survive as long as the blockchain is
+            running.
           </p>
         </BulletThreeText>
         <Image src={publicTrustless} alt="" />

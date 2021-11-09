@@ -198,7 +198,7 @@ const HowToSpreadGoodHyperVibes = () => (
         <Bullet>
           <Image src={decentralizedCuration} alt="" />
           <BulletText>
-            <BulletTitle>Decentralized Art Curation</BulletTitle>
+            <BulletTitle>Decentralized Curation</BulletTitle>
             <p>
               Give curators the ability to infuse any NFT with a curatorial
               token that can be mined by collectors, rewarding those who buy and
@@ -210,11 +210,11 @@ const HowToSpreadGoodHyperVibes = () => (
         <Bullet>
           <Image src={tokenDistribution} alt="" />
           <BulletText>
-            <BulletTitle>Social Token Distribution</BulletTitle>
+            <BulletTitle>Token Distribution</BulletTitle>
             <p>
               Distribute an artist token in a way that incentivizes holding art
-              over time and create a network of dynamic portals that stream a
-              social token to the community via NFTs.
+              over time. Create a network of dynamic NFT portals that stream a
+              social token to the community.
             </p>
           </BulletText>
         </Bullet>
