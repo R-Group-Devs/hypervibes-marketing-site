@@ -65,6 +65,28 @@ const questions = [
     ),
   },
   {
+    question: 'What NFTs can I infuse via HyperVIBES?',
+    answer: (
+      <>
+        Any ERC-721 NFTs can be infused via the protocol, depending on realm
+        configuration. ERC-1155s cannot be infused.
+        <br />
+        <br />
+        HyperVIBES is not a minting platform, it was designed to allow infusing
+        tokens into NFTs minted on any platform.
+      </>
+    ),
+  },
+  {
+    question: 'What tokens can I infuse via HyperVIBES?',
+    answer: (
+      <>
+        Any ERC-20 tokens can be used with HyperVIBES. Each realm is configured
+        with a single token.
+      </>
+    ),
+  },
+  {
     question: 'What does it cost to use HyperVIBES?',
     answer:
       'HyperVIBES will always be 100% free to use, with zero fees, forever.',
@@ -77,6 +99,45 @@ const questions = [
         nothing to govern on the protocol itself.
         <br />
         <br /> Peripheral communities may choose to launch a DAO / token.
+      </>
+    ),
+  },
+  {
+    question: 'What can I build with HyperVIBES?',
+    answer: (
+      <>
+        Anything you want. The only limit is your imagination.
+      </>
+    ),
+  },
+  {
+    question: 'Can an NFT be infused with multiple tokens?',
+    answer: (
+      <>
+        Yes, a single NFT could be infused across an infinite number of realms
+        and mining several tokens simultaneously.
+        <br />
+        <br />
+        Depending on how a realm is configured, an NFT may be infused multiple
+        times (from multiple agents) in the same realm.
+      </>
+    ),
+  },
+  {
+    question: 'Do you have to own the NFT to infuse it?',
+    answer: (
+      <>
+        This depends on the realm configuration.
+      </>
+    ),
+  },
+  {
+    question: 'How can I contribute?',
+    answer: (
+      <>
+        Hang out in the <a href="https://discord.gg/ZtZqH7nfgG">Rarible DAO
+        Discord</a>! We're working to make a habit of shipping fun and
+        highly-composable decentralized software like HyperVIBES.
       </>
     ),
   },
