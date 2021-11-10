@@ -19,6 +19,10 @@ const Container = styled.div`
 
   a {
     margin-right: 32px;
+
+    &:hover {
+      border-bottom: none;
+    }
   }
 `;
 
