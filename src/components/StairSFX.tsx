@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useLayoutEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 interface Props {
@@ -209,14 +209,47 @@ export const StairSFX = ({ isSoundOn }: Props) => {
   const stairSevenSound = useRef<HTMLAudioElement>(null);
   const stairEightSound = useRef<HTMLAudioElement>(null);
 
+  useLayoutEffect(() => {
+    if (stairOneSound.current) {
+      stairOneSound.current.volume = 0.25;
+    }
+
+    if (stairTwoSound.current) {
+      stairTwoSound.current.volume = 0.25;
+    }
+
+    if (stairThreeSound.current) {
+      stairThreeSound.current.volume = 0.25;
+    }
+
+    if (stairFourSound.current) {
+      stairFourSound.current.volume = 0.25;
+    }
+
+    if (stairFiveSound.current) {
+      stairFiveSound.current.volume = 0.25;
+    }
+
+    if (stairSixSound.current) {
+      stairSixSound.current.volume = 0.25;
+    }
+
+    if (stairSevenSound.current) {
+      stairSevenSound.current.volume = 0.25;
+    }
+
+    if (stairEightSound.current) {
+      stairEightSound.current.volume = 0.25;
+    }
+  }, []);
+
   return (
     <>
       <StairOne
         onMouseEnter={() => {
           if (isSoundOn && stairOneSound.current) {
             stairOneSound.current.currentTime = 0;
-            stairOneSound.current.volume = 0.25;
-            stairOneSound.current?.play();
+            stairOneSound.current.play();
           }
         }}
       />
@@ -224,8 +257,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairTwoSound.current) {
             stairTwoSound.current.currentTime = 0;
-            stairTwoSound.current.volume = 0.25;
-            stairTwoSound.current?.play();
+            stairTwoSound.current.play();
           }
         }}
       />
@@ -233,8 +265,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairThreeSound.current) {
             stairThreeSound.current.currentTime = 0;
-            stairThreeSound.current.volume = 0.25;
-            stairThreeSound.current?.play();
+            stairThreeSound.current.play();
           }
         }}
       />
@@ -242,8 +273,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairFourSound.current) {
             stairFourSound.current.currentTime = 0;
-            stairFourSound.current.volume = 0.25;
-            stairFourSound.current?.play();
+            stairFourSound.current.play();
           }
         }}
       />
@@ -251,8 +281,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairFiveSound.current) {
             stairFiveSound.current.currentTime = 0;
-            stairFiveSound.current.volume = 0.25;
-            stairFiveSound.current?.play();
+            stairFiveSound.current.play();
           }
         }}
       />
@@ -260,8 +289,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairSixSound.current) {
             stairSixSound.current.currentTime = 0;
-            stairSixSound.current.volume = 0.25;
-            stairSixSound.current?.play();
+            stairSixSound.current.play();
           }
         }}
       />
@@ -269,8 +297,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairSevenSound.current) {
             stairSevenSound.current.currentTime = 0;
-            stairSevenSound.current.volume = 0.25;
-            stairSevenSound.current?.play();
+            stairSevenSound.current.play();
           }
         }}
       />
@@ -278,8 +305,7 @@ export const StairSFX = ({ isSoundOn }: Props) => {
         onMouseEnter={() => {
           if (isSoundOn && stairEightSound.current) {
             stairEightSound.current.currentTime = 0;
-            stairEightSound.current.volume = 0.25;
-            stairEightSound.current?.play();
+            stairEightSound.current.play();
           }
         }}
       />
