@@ -15,6 +15,10 @@ const Container = styled.footer`
 const BuiltAt = styled.div`
   display: flex;
   flex-direction: column;
+
+  a:hover {
+    border-bottom-color: transparent;
+  }
 `;
 
 const BuiltAtDescription = styled.div`
