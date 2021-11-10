@@ -206,6 +206,7 @@ const IndexPage = () => {
       <StairsContainer>
         <Video autoPlay loop muted>
           <source src="./stairway.webm" type="video/webm" />
+          <source src="./stairway.mp4" type="video/mp4" />
         </Video>
 
         <Scroll>
