@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
 import heading from '../assets/images/headings/what-is-hypervibes.svg';
 import eye from '../assets/images/eye.png';
 import starsBg from '../assets/images/stars-bg.png';
@@ -259,46 +261,54 @@ const Image = styled.img<{ animationDelay: number }>`
 const WhatIsHyperVibes = () => (
   <Container id="what-is">
     <InnerBackground>
-      <HeadingContainer>
-        <div>
-          <Eye src={eye} alt="" />
-        </div>
-        <Heading src={heading} alt="What is HyperVIBES?" />
-      </HeadingContainer>
+      <Fade up>
+        <HeadingContainer>
+          <div>
+            <Eye src={eye} alt="" />
+          </div>
+          <Heading src={heading} alt="What is HyperVIBES?" />
+        </HeadingContainer>
+      </Fade>
 
-      <BulletOne>
-        <Image src={provenanceMining} animationDelay={0} alt="" />
-        <BulletOneText>
-          <BulletTitle>Provenance Mining</BulletTitle>
-          <p>
-            Infuse any ERC-20 tokens inside of any ERC-721 NFT. Infused tokens
-            can be mined and claimed by the NFT owner.
-          </p>
-        </BulletOneText>
-      </BulletOne>
+      <Fade up>
+        <BulletOne>
+          <Image src={provenanceMining} animationDelay={0} alt="" />
+          <BulletOneText>
+            <BulletTitle>Provenance Mining</BulletTitle>
+            <p>
+              Infuse any ERC-20 tokens inside of any ERC-721 NFT. Infused tokens
+              can be mined and claimed by the NFT owner.
+            </p>
+          </BulletOneText>
+        </BulletOne>
+      </Fade>
 
-      <BulletTwo>
-        <Image src={multiTenanted} animationDelay={1} alt="" />
-        <BulletText>
-          <BulletTitle>Infinite Realms</BulletTitle>
-          <p>
-            Create a fully isolated and independently configured HyperVIBES
-            realm to run your own experiments without having to deploy a
-            contract.
-          </p>
-        </BulletText>
-      </BulletTwo>
+      <Fade up>
+        <BulletTwo>
+          <Image src={multiTenanted} animationDelay={1} alt="" />
+          <BulletText>
+            <BulletTitle>Infinite Realms</BulletTitle>
+            <p>
+              Create a fully isolated and independently configured HyperVIBES
+              realm to run your own experiments without having to deploy a
+              contract.
+            </p>
+          </BulletText>
+        </BulletTwo>
+      </Fade>
 
-      <BulletThree>
-        <BulletThreeText>
-          <BulletTitle>Public + Trustless</BulletTitle>
-          <p>
-            Free for everyone to use and extracts no fees. Rarible DAO does not
-            retain any upgrade capabilities or privileged roles.
-          </p>
-        </BulletThreeText>
-        <Image src={publicTrustless} animationDelay={2} alt="" />
-      </BulletThree>
+      <Fade up>
+        <BulletThree>
+          <BulletThreeText>
+            <BulletTitle>Public + Trustless</BulletTitle>
+            <p>
+              Free for everyone to use and extracts no fees. Rarible DAO does
+              not retain any upgrade capabilities or privileged roles.
+            </p>
+          </BulletThreeText>
+          <Image src={publicTrustless} animationDelay={2} alt="" />
+        </BulletThree>
+      </Fade>
     </InnerBackground>
   </Container>
 );

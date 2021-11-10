@@ -1,5 +1,7 @@
 import { useState, useCallback } from 'react';
 import styled from 'styled-components';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
 import heading from '../assets/images/headings/faq.svg';
 import lightbulb from '../assets/images/lightbulb.png';
 import answerIcon from '../assets/images/icons/answer.svg';
@@ -290,13 +292,15 @@ const FAQ = () => {
 
   return (
     <Container id="faq">
-      <HeadingContainer>
-        <div>
-          <Lightbulb src={lightbulb} alt="" />
-        </div>
-        <Heading src={heading} alt="FAQ" />
-        <FaqTile />
-      </HeadingContainer>
+      <Fade up>
+        <HeadingContainer>
+          <div>
+            <Lightbulb src={lightbulb} alt="" />
+          </div>
+          <Heading src={heading} alt="FAQ" />
+          <FaqTile />
+        </HeadingContainer>
+      </Fade>
 
       <Questions>
         {questions.map((item, index) => (

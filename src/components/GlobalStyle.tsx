@@ -1,7 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { colors } from '../constants/colors';
 import circlesBg from '../assets/images/circles-bg.png';
-import starsBg from '../assets/images/stars-bg.png';
 import '../styles/fonts.css';
 
 export const GlobalStyle = createGlobalStyle`

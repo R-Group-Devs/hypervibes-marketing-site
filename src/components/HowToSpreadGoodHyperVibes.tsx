@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+// @ts-ignore
+import Fade from 'react-reveal/Fade';
 import heading from '../assets/images/headings/how-to-spread-good-hypervibes.svg';
 import glacier from '../assets/images/glacier.png';
 import starsBg from '../assets/images/stars-bg.png';
@@ -194,49 +196,57 @@ const Image = styled.img<{ animationDelay: number }>`
 const HowToSpreadGoodHyperVibes = () => (
   <Container id="how-to">
     <InnerBackground>
-      <HeadingContainer>
-        <div>
-          <Glacier src={glacier} alt="" />
-        </div>
-        <Heading src={heading} alt="What is HyperVIBES?" />
-      </HeadingContainer>
+      <Fade up>
+        <HeadingContainer>
+          <div>
+            <Glacier src={glacier} alt="" />
+          </div>
+          <Heading src={heading} alt="What is HyperVIBES?" />
+        </HeadingContainer>
+      </Fade>
 
       <Bullets>
-        <Bullet>
-          <Image src={decentralizedCuration} animationDelay={0} alt="" />
-          <BulletText>
-            <BulletTitle>Decentralized Art Curation</BulletTitle>
-            <p>
-              Give curators the ability to infuse any NFT with a curatorial
-              token that can be mined by collectors, rewarding those who buy and
-              sell art with the ability to influence the network.
-            </p>
-          </BulletText>
-        </Bullet>
+        <Fade up>
+          <Bullet>
+            <Image src={decentralizedCuration} animationDelay={0} alt="" />
+            <BulletText>
+              <BulletTitle>Decentralized Art Curation</BulletTitle>
+              <p>
+                Give curators the ability to infuse any NFT with a curatorial
+                token that can be mined by collectors, rewarding those who buy
+                and sell art with the ability to influence the network.
+              </p>
+            </BulletText>
+          </Bullet>
+        </Fade>
 
-        <Bullet>
-          <Image src={tokenDistribution} animationDelay={2} alt="" />
-          <BulletText>
-            <BulletTitle>Social Token Distribution</BulletTitle>
-            <p>
-              Distribute an artist token in a way that incentivizes holding art
-              over time and create a network of dynamic portals that stream a
-              social token to the community via NFTs.
-            </p>
-          </BulletText>
-        </Bullet>
+        <Fade up>
+          <Bullet>
+            <Image src={tokenDistribution} animationDelay={2} alt="" />
+            <BulletText>
+              <BulletTitle>Social Token Distribution</BulletTitle>
+              <p>
+                Distribute an artist token in a way that incentivizes holding
+                art over time and create a network of dynamic portals that
+                stream a social token to the community via NFTs.
+              </p>
+            </BulletText>
+          </Bullet>
+        </Fade>
 
-        <Bullet>
-          <Image src={governanceXNft} animationDelay={1} alt="" />
-          <BulletText>
-            <BulletTitle>Collectibles and Gaming</BulletTitle>
-            <p>
-              Infuse NFTs with in-game resource tokens that can be claimed by
-              the owner. Release a collectible project that infuses every NFT on
-              mint with a community governance token.
-            </p>
-          </BulletText>
-        </Bullet>
+        <Fade up>
+          <Bullet>
+            <Image src={governanceXNft} animationDelay={1} alt="" />
+            <BulletText>
+              <BulletTitle>Collectibles and Gaming</BulletTitle>
+              <p>
+                Infuse NFTs with in-game resource tokens that can be claimed by
+                the owner. Release a collectible project that infuses every NFT
+                on mint with a community governance token.
+              </p>
+            </BulletText>
+          </Bullet>
+        </Fade>
       </Bullets>
     </InnerBackground>
   </Container>
