@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `HyperVIBES`,
-    description: `The possibilities are endless in the realms of your imagination. What would you do with that power?.`,
+    description: `The possibilities are endless in the realms of your imagination. What would you do with that power?`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
