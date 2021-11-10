@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `HyperVIBES`,
-    description: `HyperVIBES is a multi-tenanted protocol that allows permissionless infusion of ERC-20 tokens inside of any ERC-721 NFT.`,
+    description: `The possibilities are endless in the realms of your imagination. What would you do with that power?.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
