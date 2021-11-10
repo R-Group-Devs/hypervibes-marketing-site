@@ -104,6 +104,11 @@ const Bullets = styled.div`
 
   @media (min-width: 650px) {
     margin-top: 70px;
+    margin-left: 0;
+  }
+
+  @media (min-width: 880px) {
+    margin-left: -30px;
   }
 
   @media (min-width: 1080px) {
@@ -126,7 +131,7 @@ const Bullet = styled.div`
   align-items: center;
   margin-top: 40px;
   margin-right: 145px;
-  margin-left: 90px;
+  margin-left: -25px;
   width: 100%;
   font-size: 16px;
   line-height: 22px;
@@ -140,24 +145,27 @@ const Bullet = styled.div`
     flex-direction: column;
     margin-top: 70px;
     margin-right: 80px;
-    width: auto;
+    width: 260px;
   }
 
   @media (min-width: 1400px) {
     margin-right: 145px;
+    width: auto;
   }
 `;
 
 const BulletText = styled.div`
+  margin-left: 0;
   width: auto;
   font-size: 16px;
   line-height: 22px;
 
-  @media (min-width: 1080px) {
-    width: 225px;
+  @media (min-width: 880px) {
+    margin-left: 40px;
+    width: 55vw;
   }
 
-  @media (min-width: 1260px) {
+  @media (min-width: 1080px) {
     width: 277px;
   }
 `;

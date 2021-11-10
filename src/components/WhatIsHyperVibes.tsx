@@ -203,12 +203,8 @@ const BulletText = styled.div`
   line-height: 22px;
 
   @media (min-width: 650px) {
-    margin-left: 20px;
-    width: 55vw;
-  }
-
-  @media (min-width: 650px) {
     margin-left: 40px;
+    width: 55vw;
   }
 
   @media (min-width: 1080px) {
