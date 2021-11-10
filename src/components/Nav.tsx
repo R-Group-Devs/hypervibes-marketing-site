@@ -1,27 +1,19 @@
 import styled from 'styled-components';
+import externalLinkIcon from '../assets/images/icons/external-link.svg';
 
-interface Props {
-  position?: 'top' | 'bottom';
-}
-
-const Container = styled.div<{ position: Props['position'] }>`
-  position: ${({ position }) => (position === 'top' ? 'fixed' : 'absolute')};
-  top: ${({ position }) => (position === 'top' ? 0 : 'auto')};
-  bottom: ${({ position }) => (position === 'bottom' ? 0 : 'auto')};
+const Container = styled.div`
+  position: fixed;
+  top: 0;
   left: 0;
-  padding: ${({ position }) =>
-    position === 'top' ? '32px 0 100px 40px' : '32px 0 75px 40px'};
-  width: ${({ position }) => (position === 'top' ? '100%' : 'auto')};
+  padding: 30px 0 100px 40px;
+  width: 100%;
   align-items: center;
-  background: ${({ position }) =>
-    position === 'top'
-      ? 'linear-gradient(#090909 50%, transparent 100%)'
-      : 'none'};
+  background: linear-gradient(#090909 50%, transparent 100%);
   z-index: 1;
   display: none;
 
   @media (min-width: 768px) {
-    display: ${({ position }) => (position === 'top' ? 'flex' : 'none')};
+    display: flex;
   }
 
   @media (min-width: 1080px) {
@@ -35,14 +27,27 @@ const Container = styled.div<{ position: Props['position'] }>`
 `;
 
 const NavItem = styled.div`
-  margin-right: 32px;
+  padding-right: 6px;
+  margin-right: 26px;
   font-family: '3616 Grammastile', sans-serif;
   font-size: 6px;
+  line-height: 12px;
   color: #fff;
+
+  a {
+    display: flex;
+    align-items: start;
+  }
 `;
 
-export const Nav = ({ position = 'top' }: Props) => (
-  <Container position={position}>
+const ExternalLinkIcon = styled.img`
+  position: relative;
+  top: 1px;
+  left: 5px;
+`;
+
+export const Nav = () => (
+  <Container>
     <NavItem>
       <a
         href="#what-is"
@@ -83,16 +88,9 @@ export const Nav = ({ position = 'top' }: Props) => (
       </a>
     </NavItem>
     <NavItem>
-      <a
-        href="#contribute"
-        onClick={e => {
-          e.preventDefault();
-          document
-            .getElementById('contribute')
-            ?.scrollIntoView({ behavior: 'smooth' });
-        }}
-      >
-        Contribute
+      <a href="https://discord.gg/E9hsASB8Hk" target="_blank" rel="noreferrer">
+        <span>Contribute</span>
+        <ExternalLinkIcon src={externalLinkIcon} alt="" />
       </a>
     </NavItem>
   </Container>

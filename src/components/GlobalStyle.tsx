@@ -33,6 +33,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a {
+    padding-bottom: 7px;
     color: #fff;
     text-decoration: none;
 
