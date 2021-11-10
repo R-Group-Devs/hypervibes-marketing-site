@@ -153,7 +153,7 @@ const Door = styled.div`
 
   &:after {
     position: relative;
-    top: 40%;
+    top: 55%;
     left: -12%;
     padding: 18px 0 0 11px;
     content: 'Soon';
