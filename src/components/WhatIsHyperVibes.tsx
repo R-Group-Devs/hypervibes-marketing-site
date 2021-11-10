@@ -6,6 +6,7 @@ import starsBg from '../assets/images/stars-bg.png';
 import provenanceMining from '../assets/images/provenance-mining.png';
 import multiTenanted from '../assets/images/multi-tenanted.png';
 import publicTrustless from '../assets/images/public-trustless.png';
+import { float } from '../styles/animations';
 
 const Container = styled.div`
   position: relative;
@@ -231,12 +232,14 @@ const BulletThreeText = styled(BulletText)`
   }
 `;
 
-const Image = styled.img`
+const Image = styled.img<{ animationDelay: number }>`
   position: relative;
   top: 0;
   width: 180px;
   height: auto;
   object-fit: contain;
+  animation: ${float} 5s ease-in-out infinite;
+  animation-delay: ${({ animationDelay }) => animationDelay}s;
   display: none;
 
   @media (min-width: 650px) {
@@ -263,7 +266,7 @@ const WhatIsHyperVibes = () => (
       </HeadingContainer>
 
       <BulletOne>
-        <Image src={provenanceMining} alt="" />
+        <Image src={provenanceMining} animationDelay={0} alt="" />
         <BulletOneText>
           <BulletTitle>Provenance Mining</BulletTitle>
           <p>
@@ -274,7 +277,7 @@ const WhatIsHyperVibes = () => (
       </BulletOne>
 
       <BulletTwo>
-        <Image src={multiTenanted} alt="" />
+        <Image src={multiTenanted} animationDelay={1} alt="" />
         <BulletText>
           <BulletTitle>Infinite Realms</BulletTitle>
           <p>
@@ -293,7 +296,7 @@ const WhatIsHyperVibes = () => (
             retain any upgrade capabilities or privileged roles.
           </p>
         </BulletThreeText>
-        <Image src={publicTrustless} alt="" />
+        <Image src={publicTrustless} animationDelay={2} alt="" />
       </BulletThree>
     </InnerBackground>
   </Container>

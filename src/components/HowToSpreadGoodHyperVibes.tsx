@@ -6,6 +6,7 @@ import starsBg from '../assets/images/stars-bg.png';
 import decentralizedCuration from '../assets/images/decentralized-curation.png';
 import tokenDistribution from '../assets/images/token-distribution.png';
 import governanceXNft from '../assets/images/governance-x-nft.png';
+import { float } from '../styles/animations';
 
 const Container = styled.div`
   margin-top: 0;
@@ -23,12 +24,13 @@ const Container = styled.div`
   }
 
   @media (min-width: 880px) {
+    padding-top: 65px;
     padding-left: 90px;
     padding-right: 0;
   }
 
   @media (min-width: 1080px) {
-    padding-top: 65px;
+    padding-top: 90px;
     padding-left: 145px;
   }
 
@@ -163,13 +165,15 @@ const BulletTitle = styled.div`
   color: #17ffe3;
 `;
 
-const Image = styled.img`
+const Image = styled.img<{ animationDelay: number }>`
   position: relative;
   top: 10px;
   width: 150px;
   height: 150px;
   margin-left: 20px;
   object-fit: contain;
+  animation: ${float} 5s ease-in-out infinite;
+  animation-delay: ${({ animationDelay }) => animationDelay}s;
   display: none;
 
   @media (min-width: 650px) {
@@ -197,7 +201,7 @@ const HowToSpreadGoodHyperVibes = () => (
 
       <Bullets>
         <Bullet>
-          <Image src={decentralizedCuration} alt="" />
+          <Image src={decentralizedCuration} animationDelay={0} alt="" />
           <BulletText>
             <BulletTitle>Decentralized Art Curation</BulletTitle>
             <p>
@@ -209,7 +213,7 @@ const HowToSpreadGoodHyperVibes = () => (
         </Bullet>
 
         <Bullet>
-          <Image src={tokenDistribution} alt="" />
+          <Image src={tokenDistribution} animationDelay={2} alt="" />
           <BulletText>
             <BulletTitle>Social Token Distribution</BulletTitle>
             <p>
@@ -221,7 +225,7 @@ const HowToSpreadGoodHyperVibes = () => (
         </Bullet>
 
         <Bullet>
-          <Image src={governanceXNft} alt="" />
+          <Image src={governanceXNft} animationDelay={1} alt="" />
           <BulletText>
             <BulletTitle>Collectibles and Gaming</BulletTitle>
             <p>
