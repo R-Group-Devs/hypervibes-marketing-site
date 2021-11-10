@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import heading from '../assets/images/headings/what-is-hypervibes.svg';
 import eye from '../assets/images/eye.png';
-import circlesBg from '../assets/images/circles-bg.png';
 import starsBg from '../assets/images/stars-bg.png';
 import provenanceMining from '../assets/images/provenance-mining.png';
 import multiTenanted from '../assets/images/multi-tenanted.png';
@@ -16,8 +15,6 @@ const Container = styled.div`
   padding-left: 40px;
   padding-right: 40px;
   width: 100%;
-  background: url(${circlesBg}) 0 0 no-repeat;
-  background-size: 800px auto;
   background-position: 200px 240px;
 
   @media (min-width: 500px) {
@@ -65,7 +62,11 @@ const InnerBackground = styled.div`
   width: 100%;
   padding-bottom: 25px;
   background: url(${starsBg}) 0 0 no-repeat;
-  background-size: 1308px auto;
+  background-size: cover;
+
+  @media (min-width: 650px) {
+    background-size: 1308px auto;
+  }
 `;
 
 const HeadingContainer = styled.div`

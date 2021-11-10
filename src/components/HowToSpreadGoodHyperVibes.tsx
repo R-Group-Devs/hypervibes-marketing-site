@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import heading from '../assets/images/headings/how-to-spread-good-hypervibes.svg';
 import glacier from '../assets/images/glacier.png';
-import circlesBg from '../assets/images/circles-bg.png';
 import starsBg from '../assets/images/stars-bg.png';
 import decentralizedCuration from '../assets/images/decentralized-curation.png';
 import tokenDistribution from '../assets/images/token-distribution.png';
@@ -15,7 +14,6 @@ const Container = styled.div`
   padding-right: 40px;
   width: 100%;
   min-height: 100vh;
-  background: url(${circlesBg}) 0 0 no-repeat;
   background-size: 800px auto;
   background-position: 200px 240px;
 
@@ -59,7 +57,11 @@ const InnerBackground = styled.div`
   width: 100%;
   min-height: 100vh;
   background: url(${starsBg}) 0 0 no-repeat;
-  background-size: 1308px auto;
+  background-size: cover;
+
+  @media (min-width: 650px) {
+    background-size: 1308px auto;
+  }
 `;
 
 const HeadingContainer = styled.div`

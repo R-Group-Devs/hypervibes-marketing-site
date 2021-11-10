@@ -104,11 +104,7 @@ const questions = [
   },
   {
     question: 'What can I build with HyperVIBES?',
-    answer: (
-      <>
-        Anything you want. The only limit is your imagination.
-      </>
-    ),
+    answer: <>Anything you want. The only limit is your imagination.</>,
   },
   {
     question: 'Can an NFT be infused with multiple tokens?',
@@ -125,19 +121,16 @@ const questions = [
   },
   {
     question: 'Do you have to own the NFT to infuse it?',
-    answer: (
-      <>
-        This depends on the realm configuration.
-      </>
-    ),
+    answer: <>This depends on the realm configuration.</>,
   },
   {
     question: 'How can I contribute?',
     answer: (
       <>
-        Hang out in the <a href="https://discord.gg/ZtZqH7nfgG">Rarible DAO
-        Discord</a>! We're working to make a habit of shipping fun and
-        highly-composable decentralized software like HyperVIBES.
+        Hang out in the{' '}
+        <a href="https://discord.gg/ZtZqH7nfgG">Rarible DAO Discord</a>! We're
+        working to make a habit of shipping fun and highly-composable
+        decentralized software like HyperVIBES.
       </>
     ),
   },

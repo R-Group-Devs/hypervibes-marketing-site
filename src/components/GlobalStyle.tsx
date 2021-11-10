@@ -1,5 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { colors } from '../constants/colors';
+import circlesBg from '../assets/images/circles-bg.png';
+import starsBg from '../assets/images/stars-bg.png';
 import '../styles/fonts.css';
 
 export const GlobalStyle = createGlobalStyle`
@@ -18,7 +20,8 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
-    background: linear-gradient(#090909 20%, #193c36 100%);
+    background: url(${circlesBg}) 42% 100px no-repeat, linear-gradient(#090909 20%, #193c36 100%);
+    background-size: 600px auto, auto;
     background-attachment: fixed;
     font-family: 'Decima Mono', 'Courier New', Courier, monospace;
     font-weight: normal;
@@ -30,6 +33,18 @@ export const GlobalStyle = createGlobalStyle`
     -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     font-feature-settings: 'kern', 'liga', 'clig', 'calt';
+
+    @media (min-width: 650px) {
+      background-size: 800px auto, auto;
+    }
+
+    @media (min-width: 1260px) {
+      background-size: 1004px auto, auto;
+    }
+
+    @media (min-width: 1800px) {
+      background-size: 1200px auto, auto;
+    }
   }
 
   a {
