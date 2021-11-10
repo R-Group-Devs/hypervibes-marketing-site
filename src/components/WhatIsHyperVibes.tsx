@@ -265,7 +265,7 @@ const WhatIsHyperVibes = () => (
       <BulletOne>
         <Image src={provenanceMining} alt="" />
         <BulletOneText>
-          <BulletTitle>Provenance Mining Protocol</BulletTitle>
+          <BulletTitle>Provenance Mining</BulletTitle>
           <p>
             Infuse any ERC-20 tokens inside of any ERC-721 NFT. Infused tokens
             can be mined and claimed by the NFT owner.
