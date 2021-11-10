@@ -228,7 +228,7 @@ const HowToSpreadGoodHyperVibes = () => (
           </Bullet>
         </Fade>
 
-        <Fade up>
+        <Fade up delay={400}>
           <Bullet>
             <Image src={tokenDistribution} animationDelay={2} alt="" />
             <BulletText>
@@ -242,7 +242,7 @@ const HowToSpreadGoodHyperVibes = () => (
           </Bullet>
         </Fade>
 
-        <Fade up>
+        <Fade up delay={200}>
           <Bullet>
             <Image src={governanceXNft} animationDelay={1} alt="" />
             <BulletText>

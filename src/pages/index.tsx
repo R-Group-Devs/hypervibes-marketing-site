@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { Layout } from '../components/Layout';
 import { SEO } from '../components/SEO';
@@ -7,6 +7,7 @@ import HowToSpreadGoodHyperVibes from '../components/HowToSpreadGoodHyperVibes';
 import FAQ from '../components/FAQ';
 import { StairSFX } from '../components/StairSFX';
 import { BackgroundMusic } from '../components/BackgroundMusic';
+import stairwayPlaceholder from '../assets/images/stairway-placeholder.png';
 import arrowDownIcon from '../assets/images/icons/arrow-down.svg';
 import soundOnIcon from '../assets/images/icons/sound-on.svg';
 import soundOffIcon from '../assets/images/icons/sound-off.svg';
@@ -30,6 +31,7 @@ const Video = styled.video`
   width: 100%;
   display: block;
   background: linear-gradient(#090909 60%, transparent 100%);
+  object-fit: cover;
 
   @media (min-width: 650px) {
     padding: 0 10% 50%;
@@ -71,9 +73,9 @@ const Description = styled.div`
   }
 `;
 
-const Scroll = styled.div`
+const Scroll = styled.div<{ isVisible: boolean }>`
   position: absolute;
-  bottom: 37%;
+  bottom: ${({ isVisible }) => (isVisible ? '37%' : '38%')};
   left: 48%;
   flex-direction: column;
   align-items: center;
@@ -81,6 +83,8 @@ const Scroll = styled.div`
   font-family: '3616 Grammastile', sans-serif;
   font-size: 6px;
   color: #17ffe3;
+  opacity: ${({ isVisible }) => (isVisible ? 1 : 0)};
+  transition: all 1s;
   z-index: 2;
   display: none;
 
@@ -89,7 +93,7 @@ const Scroll = styled.div`
   }
 
   @media (min-width: 1400px) {
-    bottom: 40%;
+    bottom: ${({ isVisible }) => (isVisible ? '40.5%' : '41.5%')};
   }
 `;
 
@@ -198,18 +202,29 @@ const Door = styled.div`
 const SoundOffIcon = styled.img``;
 
 const IndexPage = () => {
+  const [isScrollVisible, setIsScrollVisible] = useState(false);
   const [isSoundOn, setIsSoundOn] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setIsScrollVisible(true);
+    }, 2000);
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [setIsScrollVisible]);
 
   return (
     <>
       <SEO title="Home" />
       <StairsContainer>
-        <Video autoPlay loop muted>
+        <Video autoPlay loop muted poster={stairwayPlaceholder}>
           <source src="./stairway.webm" type="video/webm" />
           <source src="./stairway.mp4" type="video/mp4" />
         </Video>
 
-        <Scroll>
+        <Scroll isVisible={isScrollVisible}>
           <ArrowDown src={arrowDownIcon} alt="" />
           Scroll
         </Scroll>
