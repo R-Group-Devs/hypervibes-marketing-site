@@ -89,50 +89,15 @@ const questions = [
     ),
   },
   {
-    question: 'What does it cost to use HyperVIBES?',
-    answer:
-      'HyperVIBES will always be 100% free to use, with zero fees, forever.',
-  },
-  {
-    question: 'Is there a protocol or governance token?',
-    answer: (
-      <>
-        No, there is no upgradeable functionality nor fee extraction. There is
-        nothing to govern on the protocol itself.
-        <br />
-        <br /> Peripheral communities may choose to launch a DAO / token.
-      </>
-    ),
-  },
-  {
-    question: 'What can I build with HyperVIBES?',
-    answer: <>Anything you want. The only limit is your imagination.</>,
-  },
-  {
-    question: 'Can an NFT be infused with multiple tokens?',
-    answer: (
-      <>
-        Yes, a single NFT could be infused across an infinite number of realms
-        and mining several tokens simultaneously.
-        <br />
-        <br />
-        Depending on how a realm is configured, an NFT may be infused multiple
-        times (from multiple agents) in the same realm.
-      </>
-    ),
-  },
-  {
-    question: 'Do you have to own the NFT to infuse it?',
-    answer: <>This depends on the realm configuration.</>,
-  },
-  {
     question: 'How can I contribute?',
     answer: (
       <>
         Hang out in the{' '}
         <a href="https://discord.gg/ZtZqH7nfgG">Rarible DAO Discord</a>! We're
         working to make a habit of shipping fun and highly-composable
-        decentralized software like HyperVIBES.
+        decentralized software like HyperVIBES. Check out the{' '}
+        <a href="https://docs.hypervibes.xyz">HyperVIBES documentation</a> for
+        more in-depth information.
       </>
     ),
   },
