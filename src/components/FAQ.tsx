@@ -22,8 +22,8 @@ const questions = [
     question: 'How do I create a realm?',
     answer: (
       <>
-        The <strong>HyperVIBES dApp</strong> (coming soon) can be used to
-        create, view, and manage realms. You can also programmatically create
+        The <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a> can be used
+        to create, view, and manage realms. You can also programmatically create
         realms directly from the smart contract by invoking the{' '}
         <strong>createRealm</strong> function.
       </>
@@ -35,8 +35,8 @@ const questions = [
       <>
         You can use HyperVIBES with any ERC-721 and ERC-20 token without having
         to write any code or deploy a contract by using the{' '}
-        <strong>HyperVIBES dApp</strong> (coming soon) to manage realms, infuse
-        NFTs, and claim tokens.
+        <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a> to manage
+        realms, infuse NFTs, and claim tokens.
         <br />
         <br />
         More direct integrations can be built by directly invoking the
@@ -49,9 +49,9 @@ const questions = [
     answer: (
       <>
         You can view all realms that you are allowed to infuse within the{' '}
-        <strong>HyperVIBES dApp</strong> (coming soon). After selecting a
-        specific realm, you can then choose to infuse NFTs based on the
-        constraints and realm configuration.
+        <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a>. After
+        selecting a specific realm, you can then choose to infuse NFTs based on
+        the constraints and realm configuration.
       </>
     ),
   },
@@ -60,9 +60,9 @@ const questions = [
     answer: (
       <>
         You can view all realms that you can claim tokens from in the{' '}
-        <strong>HyperVIBES dApp</strong> (coming soon). After selecting a
-        specific realm, you can then browse the NFTs you own with claimable
-        tokens.
+        <a href="https://app.hypervibes.xyz">HyperVIBES dApp</a>. After
+        selecting a specific realm, you can then browse the NFTs you own with
+        claimable tokens.
       </>
     ),
   },
