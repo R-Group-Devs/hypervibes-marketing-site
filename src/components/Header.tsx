@@ -13,6 +13,11 @@ const LaunchApp = styled.a`
   color: #fff;
   text-decoration: none;
   z-index: 2;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline-block;
+  }
 
   &:hover {
     border-bottom: 1px solid #fff;
