@@ -193,10 +193,6 @@ const Door = styled.div`
       height: 52px;
     }
   }
-
-  &:hover:after {
-    opacity: 1;
-  }
 `;
 
 const SoundOffIcon = styled.img``;
@@ -229,7 +225,9 @@ const IndexPage = () => {
           Scroll
         </Scroll>
 
-        <Door />
+        <a href="https://app.hypervibes.xyz">
+          <Door />
+        </a>
 
         <StairSFX isSoundOn={isSoundOn} />
         <BackgroundMusic isSoundOn={isSoundOn} />
