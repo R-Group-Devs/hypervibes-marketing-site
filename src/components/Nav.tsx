@@ -88,8 +88,8 @@ export const Nav = () => (
       </a>
     </NavItem>
     <NavItem>
-      <a href="https://discord.gg/E9hsASB8Hk" target="_blank" rel="noreferrer">
-        <span>Contribute</span>
+      <a href="https://docs.hypervibes.xyz" target="_blank" rel="noreferrer">
+        <span>Learn</span>
         <ExternalLinkIcon src={externalLinkIcon} alt="" />
       </a>
     </NavItem>
