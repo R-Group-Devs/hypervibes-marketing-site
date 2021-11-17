@@ -28,7 +28,7 @@ const Container = styled.div`
 
 export default () => (
   <Container>
-    <a href="https://discord.gg/E9hsASB8Hk" target="_blank" rel="noreferrer">
+    <a href="https://discord.gg/NuWv54RdMh" target="_blank" rel="noreferrer">
       <img src={discordIcon} alt="Discord" />
     </a>
 

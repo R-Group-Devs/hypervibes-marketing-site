@@ -40,7 +40,7 @@ export const Footer = () => (
     <BuiltAt>
       <BuiltAtDescription>Dreamt up & built at</BuiltAtDescription>
 
-      <a href="https://discord.gg/E9hsASB8Hk" target="_blank" rel="noreferrer">
+      <a href="https://discord.gg/NuWv54RdMh" target="_blank" rel="noreferrer">
         <RaribleDaoLogo src={raribleDaoLogo} alt="Rarible DAO" />
       </a>
     </BuiltAt>

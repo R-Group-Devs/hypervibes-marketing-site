@@ -93,7 +93,7 @@ const questions = [
     answer: (
       <>
         Hang out in the{' '}
-        <a href="https://discord.gg/ZtZqH7nfgG">Rarible DAO Discord</a>! We're
+        <a href="https://discord.gg/NuWv54RdMh">Rarible DAO Discord</a>! We're
         working to make a habit of shipping fun and highly-composable
         decentralized software like HyperVIBES. Check out the{' '}
         <a href="https://docs.hypervibes.xyz">HyperVIBES documentation</a> for
