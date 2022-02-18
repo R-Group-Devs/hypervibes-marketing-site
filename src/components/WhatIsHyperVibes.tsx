@@ -298,8 +298,8 @@ const WhatIsHyperVibes = () => (
           <BulletThreeText>
             <BulletTitle>Public + Trustless</BulletTitle>
             <p>
-              Free for everyone to use and extracts no fees. Rarible DAO does
-              not retain any upgrade capabilities or privileged roles.
+              Free for everyone to use and extracts no fees. The DAO does not
+              retain any upgrade capabilities or privileged roles.
             </p>
           </BulletThreeText>
           <Image src={publicTrustless} animationDelay={2} alt="" />

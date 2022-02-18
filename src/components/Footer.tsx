@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { Nav } from './Nav';
-import raribleDaoLogo from '../assets/images/rarible-dao-logo.png';
+import playgroundsLogo from '../assets/images/playgrounds-logo.png';
 
 const Container = styled.footer`
   position: relative;
@@ -15,6 +14,7 @@ const Container = styled.footer`
 const BuiltAt = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   a:hover {
     border-bottom-color: transparent;
@@ -29,9 +29,9 @@ const BuiltAtDescription = styled.div`
   border-bottom: 1px solid #17ffe3;
 `;
 
-const RaribleDaoLogo = styled.img`
+const PlaygroundsLogo = styled.img`
   margin-top: 12px;
-  width: 168px;
+  width: 50px;
   height: auto;
 `;
 
@@ -40,8 +40,8 @@ export const Footer = () => (
     <BuiltAt>
       <BuiltAtDescription>Dreamt up & built at</BuiltAtDescription>
 
-      <a href="https://discord.gg/NuWv54RdMh" target="_blank" rel="noreferrer">
-        <RaribleDaoLogo src={raribleDaoLogo} alt="Rarible DAO" />
+      <a href="https://discord.gg/eT5hD56Brt" target="_blank" rel="noreferrer">
+        <PlaygroundsLogo src={playgroundsLogo} alt="Playgrounds" />
       </a>
     </BuiltAt>
   </Container>

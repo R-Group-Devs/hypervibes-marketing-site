@@ -28,11 +28,15 @@ const Container = styled.div`
 
 export default () => (
   <Container>
-    <a href="https://discord.gg/NuWv54RdMh" target="_blank" rel="noreferrer">
+    <a href="https://discord.gg/eT5hD56Brt" target="_blank" rel="noreferrer">
       <img src={discordIcon} alt="Discord" />
     </a>
 
-    <a href="https://twitter.com/raribledao" target="_blank" rel="noreferrer">
+    <a
+      href="https://twitter.com/playgroundswtf"
+      target="_blank"
+      rel="noreferrer"
+    >
       <img src={twitterIcon} alt="Twitter" />
     </a>
 
